@@ -1,13 +1,15 @@
-import './App.css'
-import PaginaLogin from './pages/pagLogin.jsx';
-
+import "./App.css";
+import PagCriarPerfil from './pages/pagCriarPerfil.jsx'
+import PaginaLogin from "./pages/pagLogin.jsx";
 
 function App() {
   return (
-<div className="App">
-  <PaginaLogin />
-</div>
-  )
+    <div className="App">
+      {/* <PaginaLogin /> */}
+      <PagCriarPerfil />
+
+    </div>
+  );
 }
 
-export default App
+export default App;
