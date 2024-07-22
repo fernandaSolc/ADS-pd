@@ -1,12 +1,12 @@
 import "./App.css";
-import PagCriarPerfil from "./pages/pagCriarPerfil.jsx";
+import PaginaInicial from "./pages/pagInicial.jsx";
 import PaginaLogin from "./pages/pagLogin.jsx";
 
 function App() {
   return (
     <div className="App">
+      <PaginaInicial />
       {/* <PaginaLogin /> */}
-      <PagCriarPerfil />
     </div>
   );
 }
