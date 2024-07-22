@@ -14,14 +14,37 @@ function Login() {
           .map(function (c) {
             return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
           })
-          .join(""),
+          .join("")
       );
 
-      console.log(JSON.parse(jsonPayload));
+      const parsedPayload = JSON.parse(jsonPayload);
+      console.log(parsedPayload);
+
+      const { name, given_name, family_name, email } = parsedPayload;
+      const userData = {
+        name,
+        given_name,
+        family_name,
+        email,
+      };
+
+      // Salvar os dados no localStorage
+      localStorage.setItem('userData', JSON.stringify(userData));
+
+      // Criar um blob com os dados JSON
+      const jsonDados = JSON.stringify(userData, null, 2);
+      const blob = new Blob([jsonDados], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+
+      // Limpar o objeto URL
+      URL.revokeObjectURL(url);
     } else {
       console.log("Login falhou", response);
     }
+
+
     ("");
+
   };
 
   return (

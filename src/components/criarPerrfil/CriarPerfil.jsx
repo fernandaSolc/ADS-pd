@@ -1,3 +1,36 @@
+
+import React, { useState } from 'react';
+import './criarPerfil.scss';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import data from './data.js';
+
+function CriarPerfil() {
+  const [file, setFile] = useState(null);
+  const [profileImageUrl, setProfileImageUrl] = useState('');
+  const [message, setMessage] = useState('');
+  const [nomeUsuario, setNomeUsuario] = useState('');
+  const [cargo, setCargo] = useState('');
+  const [dataNascimento, setDataNascimento] = useState('');
+
+  const onFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    setFile(selectedFile);
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setProfileImageUrl(reader.result);
+    };
+    reader.readAsDataURL(selectedFile);
+  };
+
+  const handleNomeChange = (event) => {
+    setNomeUsuario(event.target.value);
+  };
+
 import React, { useState } from "react";
 import "./criarPerfil.scss";
 import InputLabel from "@mui/material/InputLabel";
@@ -13,6 +46,7 @@ function CriarPerfil({ nomeUsuario }) {
   const [cargo, setCargo] = useState("");
   const [dataNascimento, setDataNascimento] = useState("");
 
+
   const handleCargoChange = (event) => {
     setCargo(event.target.value);
   };
@@ -26,6 +60,8 @@ function CriarPerfil({ nomeUsuario }) {
       name: nomeUsuario,
       cargo: cargo,
       age: dataNascimento,
+
+      profileImage: profileImageUrl
       profileImage: "kcscs", // Pode ser ajustado conforme necessário
     };
     data.push(novoPerfil);
@@ -35,10 +71,25 @@ function CriarPerfil({ nomeUsuario }) {
   return (
     <div className="quadradoRegistro">
       <h2>Criar Perfil</h2>
+      <div className='fileProfile'>
+        <label id='estilizarImg' for='perfil'></label>
+        <input type="file" id='perfil' name='perfil' onChange={onFileChange} />
+        {profileImageUrl && (
+          <div>
+            <img src={profileImageUrl} alt="Profile" width="100" />
+          </div>
+        )}
+        {message && <p>{message}</p>}
+      </div>
       <div>
         <FormControl required sx={{ m: 1, minWidth: 120 }}>
           <TextField
             label="Nome"
+
+            id="string"
+            value={nomeUsuario}
+            onChange={handleNomeChange}
+
             value={nomeUsuario}
             InputProps={{
               readOnly: true,
@@ -47,12 +98,33 @@ function CriarPerfil({ nomeUsuario }) {
         </FormControl>
       </div>
       <div>
+
+        <FormControl required sx={{ m: 2, minWidth: 223 }}>
+
         <FormControl required sx={{ m: 1, minWidth: 120 }}>
+
           <InputLabel id="cargo-label">Cargo</InputLabel>
           <Select
             labelId="cargo-label"
             id="cargo-select"
             value={cargo}
+
+            label="Cargo"
+            onChange={handleCargoChange}
+          >
+            <MenuItem value="">
+              <em>Selecione</em>
+            </MenuItem>
+            <MenuItem value="Estagiário">Estagiário(a) Psicologia</MenuItem>
+            <MenuItem value="Estagiário">Estagiário(a) Programação</MenuItem>
+            <MenuItem value="Desenvolvedora Junior">Desenvolvedor Fullstack</MenuItem>
+            <MenuItem value="Desenvolvedora Pleno">Líder d'''e Atendimento</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
+      <div>
+        <FormControl required sx={{ m: 2, minWidth: 223 }}>
+
             label="Cargo *"
             onChange={handleCargoChange}
           >
@@ -75,6 +147,7 @@ function CriarPerfil({ nomeUsuario }) {
       </div>
       <div>
         <FormControl required sx={{ m: 1, minWidth: 120 }}>
+
           <TextField
             id="data-nascimento"
             label="Data de Nascimento"
@@ -85,11 +158,18 @@ function CriarPerfil({ nomeUsuario }) {
               shrink: true,
             }}
           />
+
+        </FormControl>
+      </div>
+      <div>
+        <Button id='botaoAvancar' variant="contained" color="primary" onClick={handleSubmit}>
+
           <FormHelperText>Obrigatorio</FormHelperText>
         </FormControl>
       </div>
       <div>
         <Button variant="contained" color="primary" onClick={handleSubmit}>
+
           Avançar
         </Button>
       </div>
