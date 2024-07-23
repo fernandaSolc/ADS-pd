@@ -44,7 +44,6 @@ input[type="file"] {
   display: block;
   margin-top: 10px;
   cursor: pointer;
-<<<<<<< HEAD
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -58,21 +57,3 @@ input[type="file"] {
   border-radius: 50%;
   display: none;
 }
-=======
-}
-
-
-@media screen and (max-height: 512px) {
-  .quadradoRegistro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 8px;
-    height: 650px;
-    width: 500px;
-  }
-}
-
->>>>>>> 9381012c3cefbe7b919eefd1a6fa69209ac027a8
