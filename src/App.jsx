@@ -1,5 +1,5 @@
 import "./App.css";
-import PagCriarPerfil from './pages/pagCriarPerfil.jsx'
+import PagCriarPerfil from "./pages/pagCriarPerfil.jsx";
 import PaginaLogin from "./pages/pagLogin.jsx";
 
 function App() {
@@ -7,7 +7,6 @@ function App() {
     <div className="App">
       {/* <PaginaLogin /> */}
       <PagCriarPerfil />
-
     </div>
   );
 }
