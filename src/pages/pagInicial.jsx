@@ -8,7 +8,7 @@ const PaginaInicial = () => {
     <Box marginX={3} marginY={5}>
       <Grid container spacing={2} direction={"row"}>
         <Grid item xs>
-          <CardProfile />
+          
         </Grid>
 
         <Grid item xs={8}>
@@ -16,7 +16,7 @@ const PaginaInicial = () => {
         </Grid>
 
         <Grid item xs>
-          <CardTaskBoard />
+          
         </Grid>
       </Grid>
     </Box>

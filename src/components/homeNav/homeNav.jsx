@@ -1,27 +1,22 @@
-import { Box, Paper, Tab, Tabs } from "@mui/material";
+import {
+  Box,
+  Paper,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
 import { useState } from "react";
-import CardSocial from "../cardSocial/cardSocial";
+import AppsIcon from "@mui/icons-material/Apps";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import StorefrontIcon from "@mui/icons-material/Storefront";
 
 const HomeNavegation = () => {
   const [tabValue, setTabValue] = useState(0);
 
-  const handleTabChange = (_event, newValue) => {
-    setTabValue(newValue);
-  };
-
   const renderComponent = (tabValue) => {
     switch (tabValue) {
-      case 0:
-        return <h1>Agenda</h1>;
-
-      case 1:
-        return <CardSocial />;
-
-      case 2:
-        return <h1>Tarefas</h1>;
-
-      case 3:
-        return <h1>Ferramentas</h1>;
     }
   };
 
@@ -47,44 +42,47 @@ const HomeNavegation = () => {
           paddingY: 3,
           backgroundColor: "#FFF",
           borderRadius: "40px",
-          width: "100%",
+          width: "80vw",
           height: "80vh",
+          display: "flex",
         }}
       >
-        <Box>
-          <Tabs
-            value={tabValue}
-            onChange={handleTabChange}
-            centered
-            sx={{
-              "& .MuiTab-root": {
-                fontFamily: "Raleway, sans-serif",
-                fontSize: "24px",
-                fontWeight: "bold",
-                color: "#292929",
-              },
-
-              "& .Mui-selected": {
-                color: "#292929",
-              },
-
-              "& .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected": {
-                color: "#292929",
-              },
-
-              "& .MuiTabs-indicator": {
-                backgroundColor: "#292929",
-              },
-            }}
-          >
-            <Tab label="Agenda" />
-            <Tab label="Social" />
-            <Tab label="Tarefas" />
-            <Tab label="Ferramentas" />
-          </Tabs>
+        <Drawer
+          variant="permanent"
+          anchor="left"
+          sx={{
+            width: 200,
+            flexShrink: 0,
+            "& .MuiDrawer-paper": {
+              width: 200,
+              boxSizing: "border-box",
+              position: "relative",
+            },
+          }}
+        >
+          <List>
+            <ListItem button>
+              <AppsIcon sx={{ margin: 1 }} />{" "}
+              <ListItemText primary="Gerenciar tarefas" />
+            </ListItem>
+            <ListItem button>
+              <PermIdentityIcon sx={{ margin: 1 }} />{" "}
+              <ListItemText primary="Pessoas" />
+            </ListItem>
+            <ListItem button>
+              <CalendarMonthIcon sx={{ margin: 1 }} />{" "}
+              <ListItemText primary="Eventos" />
+            </ListItem>
+            <ListItem button>
+              <StorefrontIcon sx={{ margin: 1 }} />
+              <ListItemText primary="Loja de prêmios" />
+            </ListItem>
+          </List>
+        </Drawer>
+        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+          {/* Conteúdo principal aqui */}
+          {renderComponent(tabValue)}
         </Box>
-
-        <Box>{renderComponent(tabValue)}</Box>
       </Paper>
     </Box>
   );
