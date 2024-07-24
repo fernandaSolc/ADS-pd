@@ -2,8 +2,8 @@ import { Avatar, Box, Divider, Paper, Typography } from "@mui/material";
 
 const SocialFeedback = () => {
   //TODO Tornar dinâmico a orientação do comentário
-  
-    return (
+
+  return (
     <>
       <Box
         display={"flex"}

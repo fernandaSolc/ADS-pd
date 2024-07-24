@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import './criarPerfil.scss';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import data from './data.js';
+import React, { useState } from "react";
+import "./criarPerfil.scss";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import data from "./data.js";
 
 function CriarPerfil() {
   const [file, setFile] = useState(null);
-  const [profileImageUrl, setProfileImageUrl] = useState('');
-  const [message, setMessage] = useState('');
-  const [nomeUsuario, setNomeUsuario] = useState('');
-  const [cargo, setCargo] = useState('');
-  const [dataNascimento, setDataNascimento] = useState('');
+  const [profileImageUrl, setProfileImageUrl] = useState("");
+  const [message, setMessage] = useState("");
+  const [nomeUsuario, setNomeUsuario] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [dataNascimento, setDataNascimento] = useState("");
 
   const onFileChange = (e) => {
     const selectedFile = e.target.files[0];
@@ -43,26 +43,26 @@ function CriarPerfil() {
       name: nomeUsuario,
       cargo: cargo,
       age: dataNascimento,
-      profileImage: profileImageUrl
+      profileImage: profileImageUrl,
     };
     data.push(novoPerfil);
-    console.log('Perfil criado:', novoPerfil);
+    console.log("Perfil criado:", novoPerfil);
   };
 
   return (
     <div className="quadradoRegistro">
       <h2>Criar Perfil</h2>
-      <div className='fileProfile'>
-      <label
-        id='estilizarImg'
-        htmlFor='perfil'
-        style={{
-          backgroundImage: `url(${profileImageUrl})`,
-        }}
-      >
-        {!profileImageUrl && 'Upload'}
-      </label>
-        <input type="file" id='perfil' name='perfil' onChange={onFileChange} />
+      <div className="fileProfile">
+        <label
+          id="estilizarImg"
+          htmlFor="perfil"
+          style={{
+            backgroundImage: `url(${profileImageUrl})`,
+          }}
+        >
+          {!profileImageUrl && "Upload"}
+        </label>
+        <input type="file" id="perfil" name="perfil" onChange={onFileChange} />
         {message && <p>{message}</p>}
       </div>
       <div>
@@ -88,10 +88,18 @@ function CriarPerfil() {
             <MenuItem value="">
               <em>Selecione</em>
             </MenuItem>
-            <MenuItem value="Estagiário(a) Psicologia">Estagiário(a) Psicologia</MenuItem>
-            <MenuItem value="Estagiário(a) Programação">Estagiário(a) Programação</MenuItem>
-            <MenuItem value="Desenvolvedor Fullstack">Desenvolvedor Fullstack</MenuItem>
-            <MenuItem value="Líder de Atendimento">Líder de Atendimento</MenuItem>
+            <MenuItem value="Estagiário(a) Psicologia">
+              Estagiário(a) Psicologia
+            </MenuItem>
+            <MenuItem value="Estagiário(a) Programação">
+              Estagiário(a) Programação
+            </MenuItem>
+            <MenuItem value="Desenvolvedor Fullstack">
+              Desenvolvedor Fullstack
+            </MenuItem>
+            <MenuItem value="Líder de Atendimento">
+              Líder de Atendimento
+            </MenuItem>
           </Select>
         </FormControl>
       </div>
@@ -110,7 +118,12 @@ function CriarPerfil() {
         </FormControl>
       </div>
       <div>
-        <Button id='botaoAvancar' variant="contained" color="primary" onClick={handleSubmit}>
+        <Button
+          id="botaoAvancar"
+          variant="contained"
+          color="primary"
+          onClick={handleSubmit}
+        >
           Avançar
         </Button>
       </div>

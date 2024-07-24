@@ -18,9 +18,7 @@ const CardProfile = (agenteSucesso) => {
         backgroundColor: "rgba(142, 142, 142, 0.3)",
         borderRadius: "40px",
       }}
-    >
-      
-    </Paper>
+    ></Paper>
   );
 };
 

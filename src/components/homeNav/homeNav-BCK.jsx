@@ -22,12 +22,10 @@ const HomeNavegation = () => {
     setMonitores(event.target.value);
   };
 
-  const handleSubmitGrade = () => {
-  };
+  const handleSubmitGrade = () => {};
 
   const renderComponent = (tabValue) => {
     switch (tabValue) {
-      
     }
   };
 
@@ -58,43 +56,37 @@ const HomeNavegation = () => {
         }}
       >
         <Box>
+          <Box
+            style={{
+              boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .3)",
+              backgroundColor: "#f5f5f5",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 20,
+              border: "1px solid #ccc",
+              borderRadius: "30px",
+              height: "80vh",
+            }}
+          >
             <Box
               style={{
-                boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .3)",
-                backgroundColor: "#f5f5f5",
+                margin: 20,
+                fontFamily: "Rajdhani",
+                fontSize: 12,
+                marginTop: "3vh",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: 20,
-                border: "1px solid #ccc",
-                borderRadius: "30px",
-                height: '80vh',
-                
               }}
             >
-            <Box
-                style={{
-                  margin: 20,
-                  fontFamily: "Rajdhani",
-                  fontSize: 12,
-                  marginTop: "3vh",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                
-                Administrador <strong>Projeto Desenvolve (ALL CITIES)</strong>
-              
-              </Box>
+              Administrador <strong>Projeto Desenvolve (ALL CITIES)</strong>
+            </Box>
 
-             
-
-
+            <Box>
               <Box>
-                <Box>
                 <FormControl fullWidth>
                   <InputLabel id="demo-simple-select-label">
                     Monitores
@@ -116,7 +108,7 @@ const HomeNavegation = () => {
                   </Select>
                 </FormControl>
 
-                <FormControl fullWidth sx={{marginTop: 1}}>
+                <FormControl fullWidth sx={{ marginTop: 1 }}>
                   <InputLabel id="demo-simple-select-label">
                     Monitores
                   </InputLabel>
@@ -136,94 +128,86 @@ const HomeNavegation = () => {
                     <MenuItem value={6}>Nislayne </MenuItem>
                   </Select>
                 </FormControl>
-                </Box>
-
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <TextField
-                    label="Observação"
-                    
-                    color="secondary"
-                    multiline
-                    rows={3}
-                    value={comment}
-                    onChange={(event) => setComment(event.target.value)}
-                    sx={{
-                      marginTop: 2,
-                      
-                      backgroundColor: "white",
-                      boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
-                    }}
-                  />
-                </Box>
-                
-
-                <Box style={{ display: "flex", gap: "2vw", alingItems: "center", justifyContent: "center", marginTop: "2vh" }}>
-                
               </Box>
 
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <TextField
+                  label="Observação"
+                  color="secondary"
+                  multiline
+                  rows={3}
+                  value={comment}
+                  onChange={(event) => setComment(event.target.value)}
+                  sx={{
+                    marginTop: 2,
 
+                    backgroundColor: "white",
+                    boxShadow: "0 1px 3px 2px rgba(0, 0, 0, .1)",
+                  }}
+                />
+              </Box>
 
+              <Box
+                style={{
+                  display: "flex",
+                  gap: "2vw",
+                  alingItems: "center",
+                  justifyContent: "center",
+                  marginTop: "2vh",
+                }}
+              ></Box>
 
-
+              <Box
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  marginTop: 20,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: 20,
+                  gap: 5,
+                }}
+              >
+                <Tooltip title="Enviar notas">
+                  <Button
+                    style={{
+                      maxWidth: 30,
+                      fontSize: 12,
+                      maxHeight: 30,
+                      backgroundColor: "green",
+                      color: "white",
+                      border: "1px solid #ccc",
+                      borderRadius: "30px",
+                      fontFamily: "Rajdhani",
+                      fontWeight: "bold",
+                      boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)",
+                    }}
+                    variant="contained"
+                    onClick={handleSubmitGrade}
+                  >
+                    Enviar
+                  </Button>
+                </Tooltip>
                 <Box
                   style={{
                     display: "flex",
-                    flexDirection: "row",
-                    marginTop: 20,
+                    flexDirection: "column",
+                    marginTop: 10,
                     alignItems: "center",
                     justifyContent: "center",
-                    marginBottom: 20,
-                    gap: 5,
+                    marginBottom: 10,
                   }}
-                >
-                  
-                  <Tooltip title="Enviar notas">
-                    <Button
-                      style={{
-                        maxWidth: 30,
-                        fontSize: 12,
-                        maxHeight: 30,
-                        backgroundColor: "green",
-                        color: "white",
-                        border: "1px solid #ccc",
-                        borderRadius: "30px",
-                        fontFamily: "Rajdhani",
-                        fontWeight: "bold",
-                        boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)",
-                      }}
-                      variant="contained"
-                      onClick={handleSubmitGrade}
-                    >
-                      Enviar
-                    </Button>
-                  </Tooltip>
-                  <Box
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      marginTop: 10,
-                      alignItems: "center",
-                      justifyContent: "center",
-                      marginBottom: 10,
-                    }}
-                  >
-                    
-                  </Box>
-                </Box>
+                ></Box>
               </Box>
-
-              
-            
             </Box>
           </Box>
-
-        
+        </Box>
       </Paper>
     </Box>
   );

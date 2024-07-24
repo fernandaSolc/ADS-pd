@@ -7,17 +7,13 @@ const PaginaInicial = () => {
   return (
     <Box marginX={3} marginY={5}>
       <Grid container spacing={2} direction={"row"}>
-        <Grid item xs>
-          
-        </Grid>
+        <Grid item xs></Grid>
 
         <Grid item xs={8}>
           <HomeNavegation />
         </Grid>
 
-        <Grid item xs>
-          
-        </Grid>
+        <Grid item xs></Grid>
       </Grid>
     </Box>
   );
