@@ -16,11 +16,11 @@ const CardProfile = (agenteSucesso) => {
         paddingX: 1,
         paddingY: 3,
         backgroundColor: "rgba(142, 142, 142, 0.3)",
-        borderRadius: "40px"
+        borderRadius: "40px",
       }}
     >
       <Box sx={flexStyle}>
-        <Box id="profile-info" sx={flexStyle} gap={0.5}>
+        <Box sx={flexStyle} gap={0.5}>
           <Avatar
             src=""
             alt="Foto de Perfil do Agente"
@@ -28,23 +28,55 @@ const CardProfile = (agenteSucesso) => {
             sx={{ width: "250px", height: "250px" }}
           />
 
-          <Typography variant="h3">Nome</Typography>
+          <Typography
+            variant="h3"
+            fontFamily={"Raleway, sans-serif"}
+            fontSize={"64px"}
+            fontWeight={"bold"}
+            color={"white"}
+          >
+            Nome
+          </Typography>
 
-          <Typography variant="h5">Cargo</Typography>
+          <Typography
+            variant="h5"
+            fontFamily={"Raleway, sans-serif"}
+            fontSize={"24px"}
+            fontWeight={"bold"}
+            color={"white"}
+          >
+            Cargo
+          </Typography>
         </Box>
 
         {/* Map para percorrer todas as medalhas do Agente */}
-        <Box id="profile-badges">
+        <Box marginBottom={"2rem"}>
           <h1>BADGES AQUI!</h1>
         </Box>
 
         <Box width={"100%"}>
-          <Divider variant="middle" sx={{ backgroundColor: "#FF0" }} />
+          <Divider
+            variant="middle"
+            sx={{
+              height: "3px",
+              backgroundColor: "white",
+              borderRadius: "1rem",
+            }}
+          />
         </Box>
 
         {/* Map para percorrer todos os comentários do Agente */}
-        <Box id="profile-feedback" sx={flexStyle}>
-          <Typography variant="h3">Comentários recentes</Typography>
+        <Box marginTop={"1rem"} sx={flexStyle} gap={"3rem"}>
+          <Typography
+            variant="h3"
+            textAlign={"center"}
+            fontFamily={"Raleway, sans-serif"}
+            fontSize={"40px"}
+            fontWeight={"bold"}
+            color={"white"}
+          >
+            Comentários recentes
+          </Typography>
 
           <CardFeedback />
         </Box>

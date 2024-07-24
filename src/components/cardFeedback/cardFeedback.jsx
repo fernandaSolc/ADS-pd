@@ -9,18 +9,43 @@ const CardFeedback = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Typography>Mannelz</Typography>
+          <Typography
+            fontFamily={"Raleway, sans-serif"}
+            fontSize={"30px"}
+            fontWeight={"bold"}
+            color={"#7D7D7D"}
+          >
+            Mannelz
+          </Typography>
 
-          <Typography variant="subtitle1">3 moedas</Typography>
+          <Typography
+            variant="subtitle1"
+            fontFamily={"Raleway, sans-serif"}
+            fontSize={"16px"}
+            color={"#464646"}
+          >
+            3 moedas
+          </Typography>
         </Box>
 
-        <Divider variant="middle" sx={{ backgroundColor: "#FF0" }} />
+        <Box width={"100%"}>
+          <Divider
+            variant="fullWidth"
+            sx={{
+              height: "2px",
+              backgroundColor: "#E4E4E4",
+              borderRadius: "1rem",
+            }}
+          />
+        </Box>
 
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          voluptates voluptas est quidem quasi! Obcaecati, suscipit laborum at
-          reprehenderit cum neque numquam voluptatibus doloribus, sapiente
-          libero, porro aliquid dignissimos consequuntur?
+        <Typography
+          marginTop={"1rem"}
+          fontFamily={"Raleway, sans-serif"}
+          fontSize={"24px"}
+          color={"black"}
+        >
+          Lorem ipsum dolor sit amet
         </Typography>
       </CardContent>
     </Card>

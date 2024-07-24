@@ -18,7 +18,16 @@ const CardTask = () => {
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Typography variant="h5" sx={{ flex: 1, textAlign: "center" }}>
+        <Typography
+          variant="h5"
+          flex={1}
+          marginBottom={"0.5rem"}
+          textAlign={"center"}
+          fontFamily={"Raleway, sans-serif"}
+          fontSize={"36px"}
+          fontWeight={"bold"}
+          color={"#292929"}
+        >
           Task Category
         </Typography>
 
@@ -28,7 +37,14 @@ const CardTask = () => {
       </Box>
 
       <Box width={"100%"}>
-        <Divider variant="fullWidth" sx={{ backgroundColor: "#000" }} />
+        <Divider
+          variant="fullWidth"
+          sx={{
+            height: "3px",
+            backgroundColor: "#464646",
+            borderRadius: "1rem",
+          }}
+        />
       </Box>
 
       {/* Map para percorrer as tarefas do Agente */}
@@ -42,7 +58,13 @@ const CardTask = () => {
       >
         <input type="checkbox" style={{ width: "30px", height: "30px" }} />
 
-        <Typography>Task Title</Typography>
+        <Typography
+          fontFamily={"Raleway, sans-serif"}
+          fontSize={"24px"}
+          color={"#171717"}
+        >
+          Task Title
+        </Typography>
       </Box>
     </Box>
   );

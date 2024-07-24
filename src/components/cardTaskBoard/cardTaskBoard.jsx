@@ -12,8 +12,15 @@ const CardTaskBoard = () => {
         borderRadius: "40px",
       }}
     >
-      <Typography variant="h3" textAlign={"center"} color={"#FFF"}>
-        Tarefas
+      <Typography
+        marginBottom={"0.5rem"}
+        variant="h3"
+        textAlign={"center"}
+        fontFamily={"Righteous, sans-serif"}
+        fontSize={"48px"}
+        color={"white"}
+      >
+        TAREFAS
       </Typography>
 
       <CardTask />
