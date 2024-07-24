@@ -5,15 +5,19 @@ import HomeNavegation from "../components/homeNav/homeNav";
 
 const PaginaInicial = () => {
   return (
-    <Box marginX={3} marginY={5}>
-      <Grid container spacing={2} direction={"row"}>
-        <Grid item xs></Grid>
+    <Box marginX={2} marginY={4}>
+      <Grid container spacing={5} direction={"row"}>
+        <Grid item xs={2}>
+          <CardProfile />
+        </Grid>
 
         <Grid item xs={8}>
           <HomeNavegation />
         </Grid>
 
-        <Grid item xs></Grid>
+        <Grid item xs={2}>
+          <CardTaskBoard />
+        </Grid>
       </Grid>
     </Box>
   );

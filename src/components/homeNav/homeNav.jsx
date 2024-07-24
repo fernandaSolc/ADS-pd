@@ -29,8 +29,8 @@ const HomeNavegation = () => {
       gap={3}
     >
       <img
-        width={"100px"}
-        height={"100px"}
+        width={"75px"}
+        height={"75px"}
         src="src/assets/icons/pd-icon.png"
         alt="Ícone do Projeto Desenvolve"
       />
@@ -38,8 +38,6 @@ const HomeNavegation = () => {
       <Paper
         elevation={3}
         sx={{
-          paddingX: 1,
-          paddingY: 3,
           backgroundColor: "#FFF",
           borderRadius: "40px",
           width: "80vw",
