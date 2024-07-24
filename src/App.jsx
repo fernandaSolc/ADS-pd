@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       {/* <PaginaLogin /> */}
-      <PagCriarPerfil />
+      <PaginaInicial />
     </div>
   );
 }
