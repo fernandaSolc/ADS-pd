@@ -1,5 +1,6 @@
 import "./App.css";
-import PagCriarPerfil from "./pages/pagCriarPerfil.jsx";
+import "./assets/fonts/fonts.css";
+import PaginaInicial from "./pages/pagInicial.jsx";
 import PaginaLogin from "./pages/pagLogin.jsx";
 
 function App() {
@@ -10,5 +11,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
