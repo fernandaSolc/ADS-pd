@@ -1,0 +1,85 @@
+.perfilCom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cardPerfil {
+  height: 550px;
+  width: 1000px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.26);
+  border-radius: 2%;
+  backdrop-filter: blur(4px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+#infoPerfil, #coinPerfil, #conquistas {
+  background-color: #3b3b3b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#infoPerfil {
+  display: flex;
+  align-items: center;
+  grid-column: span 2;
+  width: 450px;
+  height: 250px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.profile-info h1 {
+  margin: 0;
+}
+
+.pd-coins {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.coins {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.achievements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-column: span 2;
+}
+
+.tab {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+}
+
+.content {
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.item {
+  background-color: #4a4a4a;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
