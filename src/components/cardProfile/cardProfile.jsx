@@ -20,18 +20,18 @@ const CardProfile = () => {
       }}
     >
       <Box sx={flexStyle}>
-        <Box sx={flexStyle} gap={0.5}>
+        <Box sx={flexStyle} gap="0.25rem">
           <Avatar
             src=""
             alt="Foto de Perfil do Agente"
             variant="rounded"
-            sx={{ width: "150px", height: "150px" }}
+            sx={{ width: "9vw", height: "17vh" }}
           />
 
           <Typography
             variant="h3"
             fontFamily={"Raleway, sans-serif"}
-            fontSize={"40px"}
+            fontSize={"2.2rem"}
             fontWeight={"bold"}
             color={"white"}
           >
@@ -41,16 +41,17 @@ const CardProfile = () => {
           <Typography
             variant="h5"
             fontFamily={"Raleway, sans-serif"}
-            fontSize={"16px"}
+            fontSize={"1.2rem"}
             fontWeight={"bold"}
             color={"white"}
+            marginBottom={"1rem"}
           >
             Cargo
           </Typography>
         </Box>
 
         {/* Map para percorrer todas as medalhas do Agente */}
-        <Box marginBottom={"2rem"}>
+        <Box marginBottom={"1.5rem"} fontSize={"0.7rem"}>
           <h1>BADGES AQUI!</h1>
         </Box>
 
@@ -58,7 +59,8 @@ const CardProfile = () => {
           <Divider
             variant="fullWidth"
             sx={{
-              height: "3px",
+              height: "0.5vh",
+              width: "12.5vw",
               backgroundColor: "white",
               borderRadius: "1rem",
             }}
@@ -66,12 +68,12 @@ const CardProfile = () => {
         </Box>
 
         {/* Map para percorrer todos os comentários do Agente */}
-        <Box marginTop={"1rem"} sx={flexStyle} gap={"3rem"}>
+        <Box marginTop={"1rem"} sx={flexStyle} gap={"1.5rem"}>
           <Typography
             variant="h3"
             textAlign={"center"}
             fontFamily={"Raleway, sans-serif"}
-            fontSize={"32px"}
+            fontSize={"1.3rem"}
             fontWeight={"bold"}
             color={"white"}
           >

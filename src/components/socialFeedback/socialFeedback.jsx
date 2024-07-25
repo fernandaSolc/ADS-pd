@@ -11,6 +11,7 @@ const SocialFeedback = () => {
         alignItems={"center"}
         gap={1.5}
         marginLeft={5}
+        marginBottom={2}
       >
         <Box
           display={"flex"}
@@ -23,12 +24,12 @@ const SocialFeedback = () => {
             src=""
             alt="Foto de Perfil do Agente"
             variant="circular"
-            sx={{ width: "100px", height: "100px" }}
+            sx={{ width: "50px", height: "50px" }}
           />
 
           <Typography
             fontFamily={"Roboto, sans-serif"}
-            fontSize={"16px"}
+            fontSize={"12px"}
             fontWeight={"medium"}
             color={"#212121"}
           >
@@ -37,7 +38,7 @@ const SocialFeedback = () => {
 
           <Typography
             fontFamily={"Roboto, sans-serif"}
-            fontSize={"11px"}
+            fontSize={"10px"}
             fontWeight={"light"}
             color={"#212121"}
           >
@@ -47,7 +48,11 @@ const SocialFeedback = () => {
 
         <Paper
           elevation={3}
-          sx={{ backgroundColor: "#F6F6F6", borderRadius: "20px" }}
+          sx={{
+            backgroundColor: "#F6F6F6",
+            borderRadius: "20px",
+            minWidth: "70%",
+          }}
         >
           <Box
             display={"flex"}
@@ -60,7 +65,7 @@ const SocialFeedback = () => {
             <Box>
               <Typography
                 fontFamily={"Raleway, sans-serif"}
-                fontSize={"20px"}
+                fontSize={"14px"}
                 fontWeight={"bold"}
                 color={"#7D7D7D"}
               >
@@ -79,7 +84,7 @@ const SocialFeedback = () => {
 
             <Typography
               fontFamily={"Raleway, sans-serif"}
-              fontSize={"24px"}
+              fontSize={"16px"}
               fontWeight={"semiBold"}
               color={"rgba(0, 0, 0, 0.7)"}
             >
@@ -105,10 +110,15 @@ const SocialFeedback = () => {
         alignItems={"center"}
         gap={1.5}
         marginRight={5}
+        marginBottom={2}
       >
         <Paper
           elevation={3}
-          sx={{ backgroundColor: "#F6F6F6", borderRadius: "20px" }}
+          sx={{
+            backgroundColor: "#F6F6F6",
+            borderRadius: "20px",
+            minWidth: "70%",
+          }}
         >
           <Box
             display={"flex"}
@@ -121,7 +131,7 @@ const SocialFeedback = () => {
             <Box>
               <Typography
                 fontFamily={"Raleway, sans-serif"}
-                fontSize={"20px"}
+                fontSize={"14px"}
                 fontWeight={"bold"}
                 color={"#7D7D7D"}
               >
@@ -140,7 +150,7 @@ const SocialFeedback = () => {
 
             <Typography
               fontFamily={"Raleway, sans-serif"}
-              fontSize={"24px"}
+              fontSize={"16px"}
               fontWeight={"semiBold"}
               color={"rgba(0, 0, 0, 0.7)"}
             >
@@ -170,12 +180,12 @@ const SocialFeedback = () => {
             src=""
             alt="Foto de Perfil do Agente"
             variant="circular"
-            sx={{ width: "100px", height: "100px" }}
+            sx={{ width: "50px", height: "50px" }}
           />
 
           <Typography
             fontFamily={"Roboto, sans-serif"}
-            fontSize={"16px"}
+            fontSize={"12px"}
             fontWeight={"medium"}
             color={"#212121"}
           >
@@ -184,7 +194,7 @@ const SocialFeedback = () => {
 
           <Typography
             fontFamily={"Roboto, sans-serif"}
-            fontSize={"11px"}
+            fontSize={"10px"}
             fontWeight={"light"}
             color={"#212121"}
           >
@@ -193,7 +203,7 @@ const SocialFeedback = () => {
         </Box>
       </Box>
 
-      <Box
+      {/* <Box
         display={"flex"}
         justifyContent={"flex-start"}
         alignItems={"center"}
@@ -211,12 +221,12 @@ const SocialFeedback = () => {
             src=""
             alt="Foto de Perfil do Agente"
             variant="circular"
-            sx={{ width: "100px", height: "100px" }}
+            sx={{ width: "50px", height: "50px" }}
           />
 
           <Typography
             fontFamily={"Roboto, sans-serif"}
-            fontSize={"16px"}
+            fontSize={"12px"}
             fontWeight={"medium"}
             color={"#212121"}
           >
@@ -225,7 +235,7 @@ const SocialFeedback = () => {
 
           <Typography
             fontFamily={"Roboto, sans-serif"}
-            fontSize={"11px"}
+            fontSize={"10px"}
             fontWeight={"light"}
             color={"#212121"}
           >
@@ -248,7 +258,7 @@ const SocialFeedback = () => {
             <Box>
               <Typography
                 fontFamily={"Raleway, sans-serif"}
-                fontSize={"20px"}
+                fontSize={"12px"}
                 fontWeight={"bold"}
                 color={"#7D7D7D"}
               >
@@ -267,7 +277,7 @@ const SocialFeedback = () => {
 
             <Typography
               fontFamily={"Raleway, sans-serif"}
-              fontSize={"24px"}
+              fontSize={"12px"}
               fontWeight={"semiBold"}
               color={"rgba(0, 0, 0, 0.7)"}
             >
@@ -277,7 +287,7 @@ const SocialFeedback = () => {
 
             <Typography
               fontFamily={"Raleway, sans-serif"}
-              fontSize={"12px"}
+              fontSize={"10px"}
               fontWeight={"semiBold"}
               color={"rgba(0, 0, 0, 0.7)"}
             >
@@ -309,7 +319,7 @@ const SocialFeedback = () => {
             <Box>
               <Typography
                 fontFamily={"Raleway, sans-serif"}
-                fontSize={"20px"}
+                fontSize={"12px"}
                 fontWeight={"bold"}
                 color={"#7D7D7D"}
               >
@@ -328,7 +338,7 @@ const SocialFeedback = () => {
 
             <Typography
               fontFamily={"Raleway, sans-serif"}
-              fontSize={"24px"}
+              fontSize={"12px"}
               fontWeight={"semiBold"}
               color={"rgba(0, 0, 0, 0.7)"}
             >
@@ -338,7 +348,7 @@ const SocialFeedback = () => {
 
             <Typography
               fontFamily={"Raleway, sans-serif"}
-              fontSize={"12px"}
+              fontSize={"10px"}
               fontWeight={"semiBold"}
               color={"rgba(0, 0, 0, 0.7)"}
             >
@@ -358,12 +368,12 @@ const SocialFeedback = () => {
             src=""
             alt="Foto de Perfil do Agente"
             variant="circular"
-            sx={{ width: "100px", height: "100px" }}
+            sx={{ width: "50px", height: "50px" }}
           />
 
           <Typography
             fontFamily={"Roboto, sans-serif"}
-            fontSize={"16px"}
+            fontSize={"12px"}
             fontWeight={"medium"}
             color={"#212121"}
           >
@@ -372,14 +382,14 @@ const SocialFeedback = () => {
 
           <Typography
             fontFamily={"Roboto, sans-serif"}
-            fontSize={"11px"}
+            fontSize={"10px"}
             fontWeight={"light"}
             color={"#212121"}
           >
             CEO of SpaceX
           </Typography>
         </Box>
-      </Box>
+      </Box> */}
     </>
   );
 };
