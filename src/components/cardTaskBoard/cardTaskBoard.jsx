@@ -8,6 +8,7 @@ const CardTaskBoard = () => {
       sx={{
         paddingX: 1,
         paddingY: 3,
+        width: "14.5vw",
         backgroundColor: "rgba(142, 142, 142, 0.3)",
         borderRadius: "40px",
       }}
@@ -17,7 +18,7 @@ const CardTaskBoard = () => {
         variant="h3"
         textAlign={"center"}
         fontFamily={"Righteous, sans-serif"}
-        fontSize={"48px"}
+        fontSize={"1.3rem"}
         color={"white"}
       >
         TAREFAS

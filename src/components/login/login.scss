@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
 }
-.login{
+.login {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@
   border-radius: 2%;
   backdrop-filter: blur(4px);
 }
-.google-login-button  {
+.google-login-button {
   background-color: rgba(255, 255, 255, 0);
   border: none;
 }
@@ -29,21 +29,26 @@
 @media screen and (max-width: 1122px) {
   .pag1 {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     min-height: 100vh;
     justify-content: center;
     background-color: black;
   }
-  
+
   .imageLogin {
     height: 100px;
   }
-  
-  .login{
+
+  .login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: none;
+  }
+}
+@media screen and (max-height: 728px) {
+  .login {
+    height: 500px;
   }
 }

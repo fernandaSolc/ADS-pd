@@ -1,4 +1,4 @@
-import { Box, Divider, IconButton, Typography } from "@mui/material";
+import { Box, Checkbox, Divider, IconButton, Typography } from "@mui/material";
 import FilterListIcon from "@mui/icons-material/FilterList";
 
 const CardTask = () => {
@@ -8,7 +8,7 @@ const CardTask = () => {
       flexDirection={"column"}
       justifyContent={"center"}
       paddingX={1}
-      paddingY={3}
+      paddingY={2}
       borderRadius={"14px"}
       sx={{ backgroundColor: "#F0F0F0" }}
     >
@@ -24,7 +24,7 @@ const CardTask = () => {
           marginBottom={"0.5rem"}
           textAlign={"center"}
           fontFamily={"Raleway, sans-serif"}
-          fontSize={"36px"}
+          fontSize={"1rem "}
           fontWeight={"bold"}
           color={"#292929"}
         >
@@ -40,7 +40,7 @@ const CardTask = () => {
         <Divider
           variant="fullWidth"
           sx={{
-            height: "3px",
+            height: "0.3vh",
             backgroundColor: "#464646",
             borderRadius: "1rem",
           }}
@@ -56,14 +56,50 @@ const CardTask = () => {
         gap={0.5}
         paddingTop={2}
       >
-        <input type="checkbox" style={{ width: "30px", height: "30px" }} />
+        <Checkbox color="default" />
 
         <Typography
           fontFamily={"Raleway, sans-serif"}
-          fontSize={"24px"}
+          fontSize={"1rem"}
           color={"#171717"}
         >
-          Task Title
+          Tarefa 1
+        </Typography>
+      </Box>
+      <Box
+        id="task-body"
+        display={"flex"}
+        justifyContent={"flex-start"}
+        alignItems={"center"}
+        gap={0.5}
+        paddingTop={2}
+      >
+        <Checkbox color="default" />
+
+        <Typography
+          fontFamily={"Raleway, sans-serif"}
+          fontSize={"1rem"}
+          color={"#171717"}
+        >
+          Tarefa 2
+        </Typography>
+      </Box>
+      <Box
+        id="task-body"
+        display={"flex"}
+        justifyContent={"flex-start"}
+        alignItems={"center"}
+        gap={0.5}
+        paddingTop={2}
+      >
+        <Checkbox color="default" />
+
+        <Typography
+          fontFamily={"Raleway, sans-serif"}
+          fontSize={"1rem"}
+          color={"#171717"}
+        >
+          Tarefa 3
         </Typography>
       </Box>
     </Box>

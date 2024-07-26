@@ -31,11 +31,11 @@ const HomeNavegation = () => {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      gap={3}
+      gap={1}
     >
       <img
-        width={"75px"}
-        height={"75px"}
+        width={"50vw"}
+        height={"50vh"}
         src="src/assets/icons/pd-icon.png"
         alt="Ícone do Projeto Desenvolve"
       />
@@ -45,7 +45,7 @@ const HomeNavegation = () => {
         sx={{
           backgroundColor: "#FFF",
           borderRadius: "40px",
-          width: "100%",
+          width: "65vw",
           height: "80vh",
         }}
       >
@@ -57,9 +57,11 @@ const HomeNavegation = () => {
             sx={{
               "& .MuiTab-root": {
                 fontFamily: "Raleway, sans-serif",
-                fontSize: "24px",
+                fontSize: "1rem",
                 fontWeight: "bold",
                 color: "#292929",
+                paddingX: "0",
+                marginX: "2.3rem",
               },
 
               "& .Mui-selected": {
@@ -82,7 +84,13 @@ const HomeNavegation = () => {
           </Tabs>
         </Box>
 
-        <Box maxHeight={"80%"} overflow={"auto"}>
+        <Box
+          maxHeight={"80vh"}
+          overflow={"auto"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
           {renderComponent(tabValue)}
         </Box>
       </Paper>

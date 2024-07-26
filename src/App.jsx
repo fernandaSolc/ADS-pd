@@ -6,10 +6,9 @@ import PaginaLogin from "./pages/pagLogin.jsx";
 function App() {
   return (
     <div className="App">
-      <PaginaInicial />
       {/* <PaginaLogin /> */}
+      <PaginaInicial />
     </div>
   );
 }
-
 export default App;
