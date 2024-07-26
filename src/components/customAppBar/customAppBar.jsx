@@ -114,8 +114,6 @@ const CustomAppBar = () => {
                   </Typography>
                 </ListItemText>
               </MenuItem>
-
-              <Divider variant="middle" color="black" />
             </MenuList>
           </Menu>
         </Box>
