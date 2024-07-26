@@ -1,7 +1,23 @@
 import { useState } from "react";
-import { AppBar, Box, IconButton, Menu, MenuItem } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Divider,
+  IconButton,
+  ListItemIcon,
+  ListItemText,
+  Menu,
+  MenuItem,
+  MenuList,
+  Typography,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import SettingsIcon from "@mui/icons-material/Settings";
+import Groups3Icon from "@mui/icons-material/Groups3";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 
 const CustomAppBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -43,9 +59,76 @@ const CustomAppBar = () => {
           </IconButton>
 
           <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-            <MenuItem onClick={handleClose}>Teste1</MenuItem>
-            <MenuItem onClick={handleClose}>Teste2</MenuItem>
-            <MenuItem onClick={handleClose}>Teste3</MenuItem>
+            <MenuList>
+              {/* TODO Renderização condicional somente para administradores */}
+              <MenuItem onClick={handleClose}>
+                <ListItemIcon>
+                  <SettingsIcon sx={{ color: "black" }} />
+                </ListItemIcon>
+
+                <ListItemText>
+                  <Typography fontWeight={"bold"} color={"black"}>
+                    Administrador
+                  </Typography>
+                </ListItemText>
+              </MenuItem>
+
+              <Divider variant="middle" color="black" />
+
+              <MenuItem onClick={handleClose}>
+                <ListItemIcon>
+                  <Groups3Icon sx={{ color: "black" }} />
+                </ListItemIcon>
+
+                <ListItemText>
+                  <Typography fontWeight={"bold"} color={"black"}>
+                    Integrantes
+                  </Typography>
+                </ListItemText>
+              </MenuItem>
+
+              <Divider variant="middle" color="black" />
+
+              <MenuItem onClick={handleClose}>
+                <ListItemIcon>
+                  <AttachMoneyIcon sx={{ color: "black" }} />
+                </ListItemIcon>
+
+                <ListItemText>
+                  <Typography fontWeight={"bold"} color={"black"}>
+                    PD Store
+                  </Typography>
+                </ListItemText>
+              </MenuItem>
+
+              <Divider variant="middle" color="black" />
+
+              <MenuItem onClick={handleClose}>
+                <ListItemIcon>
+                  <PermIdentityIcon sx={{ color: "black" }} />
+                </ListItemIcon>
+
+                <ListItemText>
+                  <Typography fontWeight={"bold"} color={"black"}>
+                    Perfil
+                  </Typography>
+                </ListItemText>
+              </MenuItem>
+
+              <Divider variant="middle" color="black" />
+
+              <MenuItem onClick={handleClose}>
+                <ListItemIcon>
+                  <CalendarTodayIcon sx={{ color: "black" }} />
+                </ListItemIcon>
+
+                <ListItemText>
+                  <Typography fontWeight={"bold"} color={"black"}>
+                    Eventos
+                  </Typography>
+                </ListItemText>
+              </MenuItem>
+            </MenuList>
           </Menu>
         </Box>
       </AppBar>
