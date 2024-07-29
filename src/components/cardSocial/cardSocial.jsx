@@ -1,4 +1,4 @@
-import { Alert, Avatar, Box, Divider, Paper, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import SocialFeedback from "../socialFeedback/socialFeedback";
 import SocialNotification from "../socialNotification/socialNotification";
 

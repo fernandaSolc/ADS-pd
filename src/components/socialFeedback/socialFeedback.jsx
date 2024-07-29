@@ -1,4 +1,5 @@
 import { Avatar, Box, Divider, Paper, Typography } from "@mui/material";
+import CustomAvatar from "../customAvatar/customAvatar";
 
 const SocialFeedback = () => {
   //TODO Tornar dinâmico a orientação do comentário
@@ -13,38 +14,7 @@ const SocialFeedback = () => {
         marginLeft={5}
         marginBottom={2}
       >
-        <Box
-          display={"flex"}
-          flexDirection={"column"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          gap={0.5}
-        >
-          <Avatar
-            src=""
-            alt="Foto de Perfil do Agente"
-            variant="circular"
-            sx={{ width: "50px", height: "50px" }}
-          />
-
-          <Typography
-            fontFamily={"Roboto, sans-serif"}
-            fontSize={"12px"}
-            fontWeight={"medium"}
-            color={"#212121"}
-          >
-            Elon Musk
-          </Typography>
-
-          <Typography
-            fontFamily={"Roboto, sans-serif"}
-            fontSize={"10px"}
-            fontWeight={"light"}
-            color={"#212121"}
-          >
-            CEO of SpaceX
-          </Typography>
-        </Box>
+        <CustomAvatar />
 
         <Paper
           elevation={3}
@@ -169,38 +139,7 @@ const SocialFeedback = () => {
           </Box>
         </Paper>
 
-        <Box
-          display={"flex"}
-          flexDirection={"column"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          gap={0.5}
-        >
-          <Avatar
-            src=""
-            alt="Foto de Perfil do Agente"
-            variant="circular"
-            sx={{ width: "50px", height: "50px" }}
-          />
-
-          <Typography
-            fontFamily={"Roboto, sans-serif"}
-            fontSize={"12px"}
-            fontWeight={"medium"}
-            color={"#212121"}
-          >
-            Elon Musk
-          </Typography>
-
-          <Typography
-            fontFamily={"Roboto, sans-serif"}
-            fontSize={"10px"}
-            fontWeight={"light"}
-            color={"#212121"}
-          >
-            CEO of SpaceX
-          </Typography>
-        </Box>
+        <CustomAvatar agent_name="Mannelz" agent_role="Teste" />
       </Box>
 
       {/* <Box
