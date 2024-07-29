@@ -1,8 +1,9 @@
 import { Box, Paper, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
 import CardSocial from "../cardSocial/cardSocial";
+import CardTools from "../cardTools/tools";
 
-const HomeNavegation = () => {
+const HomeNavigation = () => {
   const [tabValue, setTabValue] = useState(0);
 
   const handleTabChange = (_event, newValue) => {
@@ -21,7 +22,7 @@ const HomeNavegation = () => {
         return <h1>Tarefas</h1>;
 
       case 3:
-        return <h1>Ferramentas</h1>;
+        return <CardTools />;
     }
   };
 
@@ -33,13 +34,6 @@ const HomeNavegation = () => {
       alignItems={"center"}
       gap={1}
     >
-      <img
-        width={"50vw"}
-        height={"50vh"}
-        src="src/assets/icons/pd-icon.png"
-        alt="Ícone do Projeto Desenvolve"
-      />
-
       <Paper
         elevation={3}
         sx={{
@@ -92,4 +86,4 @@ const HomeNavegation = () => {
   );
 };
 
-export default HomeNavegation;
+export default HomeNavigation;
