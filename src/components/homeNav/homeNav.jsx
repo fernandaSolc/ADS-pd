@@ -1,8 +1,9 @@
 import { Box, Paper, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
 import CardSocial from "../cardSocial/cardSocial";
+import CardTools from "../cardTools/tools";
 
-const HomeNavegation = () => {
+const HomeNavigation = () => {
   const [tabValue, setTabValue] = useState(0);
 
   const handleTabChange = (_event, newValue) => {
@@ -21,7 +22,7 @@ const HomeNavegation = () => {
         return <h1>Tarefas</h1>;
 
       case 3:
-        return <h1>Ferramentas</h1>;
+        return <CardTools />;
     }
   };
 
@@ -31,21 +32,14 @@ const HomeNavegation = () => {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      gap={3}
+      gap={1}
     >
-      <img
-        width={"75px"}
-        height={"75px"}
-        src="src/assets/icons/pd-icon.png"
-        alt="Ícone do Projeto Desenvolve"
-      />
-
       <Paper
         elevation={3}
         sx={{
           backgroundColor: "#FFF",
           borderRadius: "40px",
-          width: "100%",
+          width: "65vw",
           height: "80vh",
         }}
       >
@@ -57,9 +51,11 @@ const HomeNavegation = () => {
             sx={{
               "& .MuiTab-root": {
                 fontFamily: "Raleway, sans-serif",
-                fontSize: "24px",
+                fontSize: "1rem",
                 fontWeight: "bold",
                 color: "#292929",
+                paddingX: "0",
+                marginX: "2.3rem",
               },
 
               "& .Mui-selected": {
@@ -90,4 +86,4 @@ const HomeNavegation = () => {
   );
 };
 
-export default HomeNavegation;
+export default HomeNavigation;

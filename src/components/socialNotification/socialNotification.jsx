@@ -12,7 +12,12 @@ const SocialNotification = ({ message }) => {
       marginBottom={2}
       paddingX={"50%"}
     >
-      <Alert sx={{ minWidth: "750px", textAlign: "justify" }}>{message}</Alert>
+      <Alert
+        icon={false}
+        sx={{ minWidth: "750px", textAlign: "justify", fontSize: "12px" }}
+      >
+        {message}
+      </Alert>
     </Box>
   );
 };
