@@ -78,13 +78,7 @@ const HomeNavigation = () => {
           </Tabs>
         </Box>
 
-        <Box
-          maxHeight={"80vh"}
-          overflow={"auto"}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
+        <Box maxHeight={"80%"} overflow={"auto"}>
           {renderComponent(tabValue)}
         </Box>
       </Paper>
@@ -92,4 +86,4 @@ const HomeNavigation = () => {
   );
 };
 
-export default HomeNavigation;
+export default HomeNavegation;
