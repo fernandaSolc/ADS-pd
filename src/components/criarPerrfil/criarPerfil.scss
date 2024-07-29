@@ -20,8 +20,8 @@ button {
 }
 
 #botaoAvancar {
-  background-color:#085312;
-  transition-delay: 0.2s ;
+  background-color: #085312;
+  transition-delay: 0.2s;
 }
 #botaoAvancar:hover {
   transition-duration: 0.2s;
@@ -31,31 +31,29 @@ button {
 input[type="file"] {
   display: none;
 }
+
 #estilizarImg {
   padding: 20px 10px;
   width: 100px;
   height: 75px;
-  border-radius: 100%;
-  background-color: #333;
-  color: #FFF;
+  border-radius: 50%;
+  background-color: #acacac;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   display: block;
   margin-top: 10px;
   cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
 }
 
-
-@media screen and (max-height: 512px) {
-  .quadradoRegistro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 8px;
-    height: 650px;
-    width: 500px;
-  }
+#estilizarImg img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: none;
 }
-
