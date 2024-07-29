@@ -1,7 +1,12 @@
 import { Avatar, Box, Divider, Paper, Typography } from "@mui/material";
 import CardFeedback from "../cardFeedback/cardFeedback";
+import Perfil from "../../pages/pagPerfil.jsx";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CardProfile = () => {
+  const navigate = useNavigate();
+
   const flexStyle = {
     display: "flex",
     flexDirection: "column",
@@ -26,6 +31,8 @@ const CardProfile = () => {
             alt="Foto de Perfil do Agente"
             variant="rounded"
             sx={{ width: "9vw", height: "17vh" }}
+            onClick={() => navigate("/perfil")}
+            style={{ cursor: "pointer" }}
           />
 
           <Typography
@@ -34,6 +41,8 @@ const CardProfile = () => {
             fontSize={"2.2rem"}
             fontWeight={"bold"}
             color={"white"}
+            onClick={() => navigate("/perfil")}
+            style={{ cursor: "pointer" }}
           >
             Nome
           </Typography>

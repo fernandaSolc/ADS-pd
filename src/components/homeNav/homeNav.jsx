@@ -86,4 +86,4 @@ const HomeNavigation = () => {
   );
 };
 
-export default HomeNavegation;
+export default HomeNavigation;

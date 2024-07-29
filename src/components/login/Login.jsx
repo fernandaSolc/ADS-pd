@@ -1,9 +1,13 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import logoLogin from "../../assets/logoLogin.svg";
 import "./login.scss";
 import googleIcon from "../../assets/google.svg";
 
 function Login() {
+  const navigate = useNavigate();
+
   const responseGoogle = (response) => {
     if (response.credential) {
       const base64Url = response.credential.split(".")[1];
@@ -20,15 +24,23 @@ function Login() {
       const parsedPayload = JSON.parse(jsonPayload);
       console.log(parsedPayload);
 
-      const { name, given_name, family_name, email } = parsedPayload;
+      const { name, given_name, family_name, email, hd } = parsedPayload;
       const userData = {
         name,
         given_name,
         family_name,
         email,
+        hd,
       };
 
       localStorage.setItem("userData", JSON.stringify(userData));
+
+      // Redirecionar com base no domínio do email
+      if (userData.email.endsWith("@projetodesenvolve.com.br")) {
+        navigate("/inicio");
+      } else {
+        navigate("/cadastro");
+      }
 
       const jsonDados = JSON.stringify(userData, null, 2);
       const blob = new Blob([jsonDados], { type: "application/json" });
@@ -38,8 +50,6 @@ function Login() {
     } else {
       console.log("Login falhou", response);
     }
-
-    ("");
   };
 
   return (
@@ -50,7 +60,7 @@ function Login() {
         </div>
         <div className="login">
           <GoogleLogin onSuccess={responseGoogle} onError={responseGoogle}>
-            <button className="google-login-button" onClick={responseGoogle}>
+            <button className="google-login-button">
               <img id="google" src={googleIcon} alt="Google Login" />
             </button>
           </GoogleLogin>
