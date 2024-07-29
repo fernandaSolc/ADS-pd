@@ -1,13 +1,17 @@
+import { BrowserRouter } from "react-router-dom";
+import RoutesApp from "./routes";
 import "./App.css";
 import "./assets/fonts/fonts.css";
-import PaginaInicial from "./pages/pagInicial.jsx";
-import PaginaLogin from "./pages/pagLogin.jsx";
+import PagCriarPerfil from "./pages/pagCriarPerfil.jsx";
+import Perfil from "./pages/pagPerfil.jsx";
 
 function App() {
   return (
     <div className="App">
-      {/* <PaginaLogin /> */}
-      <PaginaInicial />
+      <Perfil />
+      {/* <BrowserRouter>
+        <RoutesApp />
+      </BrowserRouter> */}
     </div>
   );
 }
