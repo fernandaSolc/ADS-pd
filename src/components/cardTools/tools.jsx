@@ -79,8 +79,8 @@ const CardTools = () => {
     //     </IconButton>
     //   </Box>
     // </Box>
-    <Box width={"80%"}>
-      <Grid container rowSpacing={3}>
+    <Box width={"100%"} >
+      <Grid container rowSpacing={5} >
         {/* TODO Componentizar e criar um map para percorrer todas as ferramentas */}
         <Grid item xs={6}>
           <Box display={"flex"} justifyContent={"center"}>
@@ -91,13 +91,14 @@ const CardTools = () => {
               gap={5}
               width={"60%"}
               bgcolor={"#7B93AD"}
+              color={"white"}
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-                Teste1
+              Cadastro de alunos
               </Typography>
 
-              <IconButton>
+              <IconButton href="https://dadosalunos.netlify.app/" target="_blank">
                 <OpenInNewIcon />
               </IconButton>
             </Box>
@@ -113,13 +114,14 @@ const CardTools = () => {
               gap={5}
               width={"60%"}
               bgcolor={"#7B93AD"}
+              color={"white"}
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-                Teste2
+              Monitoria
               </Typography>
 
-              <IconButton>
+              <IconButton href="https://docs.google.com/spreadsheets/d/18ZIS_edNXyGgP0-jRQ_-5Ikvi_SwQi1AzY4RsRrnSTA/edit?gid=62481219#gid=62481219" target="_blank">
                 <OpenInNewIcon />
               </IconButton>
             </Box>
@@ -135,13 +137,83 @@ const CardTools = () => {
               gap={5}
               width={"60%"}
               bgcolor={"#7B93AD"}
+              color={"white"}
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-                Teste3
+              Lançamento de notas
               </Typography>
 
-              <IconButton>
+              <IconButton href="https://postagem-notas.vercel.app/" target="_blank">
+                <OpenInNewIcon />
+              </IconButton>
+            </Box>
+          </Box>
+        </Grid>
+
+        <Grid item xs={6}>
+          <Box display={"flex"} justifyContent={"center"}>
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+              gap={5}
+              width={"60%"}
+              bgcolor={"#7B93AD"}
+              color={"white"}
+              borderRadius={"8px"}
+            >
+              <Typography flex={1} textAlign={"center"}>
+              Alunos Itabira
+              </Typography>
+
+              <IconButton href="https://docs.google.com/spreadsheets/d/1SlSr59cWVKjHfYWKRSwkmTBs8WEatpR5NorefV3pkiM/edit?gid=1966860445#gid=1966860445" target="_blank">
+                <OpenInNewIcon />
+              </IconButton>
+            </Box>
+          </Box>
+        </Grid>
+
+        <Grid item xs={6}>
+          <Box display={"flex"} justifyContent={"center"}>
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+              gap={5}
+              width={"60%"}
+              bgcolor={"#7B93AD"}
+              color={"white"}
+              borderRadius={"8px"}
+            >
+              <Typography flex={1} textAlign={"center"}>
+              Alunos BD
+              </Typography>
+
+              <IconButton href="https://docs.google.com/spreadsheets/d/18ZIS_edNXyGgP0-jRQ_-5Ikvi_SwQi1AzY4RsRrnSTA/edit?gid=1671759979#gid=1671759979" target="_blank">
+                <OpenInNewIcon />
+              </IconButton>
+            </Box>
+          </Box>
+        </Grid>
+
+        <Grid item xs={6}>
+          <Box display={"flex"} justifyContent={"center"}>
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+              gap={5}
+              width={"60%"}
+              bgcolor={"#7B93AD"}
+              color={"white"}
+              borderRadius={"8px"}
+            >
+              <Typography flex={1} textAlign={"center"}>
+              Notas de alunos
+              </Typography>
+
+              <IconButton href="https://avaliacoespd.vercel.app/" target="_blank">
                 <OpenInNewIcon />
               </IconButton>
             </Box>
