@@ -12,6 +12,7 @@ import PaginaIntegrantes from "./pages/pagIntegrantes";
 function App() {
   return (
     <div className="App">
+      <CustomAppBar />
       <Router>
         <Routes>
           <Route path="/" element={<PaginaLogin />} />
@@ -22,7 +23,6 @@ function App() {
           <Route path="/loja" element={<PaginaLoja />} />
         </Routes>
       </Router>
-      {/* <CustomAppBar /> */}
     </div>
   );
 }

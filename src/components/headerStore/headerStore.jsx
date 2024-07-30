@@ -6,22 +6,31 @@ import {
   Button,
   IconButton,
 } from "@mui/material";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 
 const HeaderStore = () => {
   return (
-    <>
-      <AppBar position="static" color="default">
-        <Toolbar>
+    <AppBar
+      position="static"
+      sx={{
+        "&.MuiAppBar-root": {
+          backgroundColor: "lightgray",
+          borderBottomRightRadius: "15px",
+          borderBottomLeftRadius: "15px",
+        },
+      }}
+    >
+      <Toolbar>
+        <Box marginRight={"15px"}>
           <IconButton
             sx={{
               bgcolor: "white",
-              marginRight: "5px",
               width: "50px",
-              height: "45px",
+              height: "50px",
             }}
           >
             <ArrowBackIosNewIcon
@@ -32,26 +41,38 @@ const HeaderStore = () => {
               }}
             />
           </IconButton>
-          <Typography variant="h6" color="#565151" sx={{ flexGrow: 1 }}>
-            Loja de Produtos
-          </Typography>
-          <Box display="flex" alignItems="center">
-            <Typography variant="h6" sx={{ marginRight: 2 }}>
-              Meu saldo: $30
+        </Box>
+
+        <Typography variant="h6" color="#565151" sx={{ flexGrow: 1 }}>
+          Loja de Produtos
+        </Typography>
+        <Box display="flex" alignItems="center">
+          <Box marginRight={2}>
+            <Typography variant="h6" sx={{ color: "black" }}>
+              Meu saldo:
             </Typography>
-            <IconButton color="inherit">
-              <AccountCircleIcon />
-            </IconButton>
-            <IconButton color="inherit">
-              <FavoriteBorderOutlinedIcon />
-            </IconButton>
-            <IconButton color="inherit">
-              <ShoppingCartIcon />
-            </IconButton>
+            <Box
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              gap={0.5}
+            >
+              <MonetizationOnIcon sx={{ color: "green" }} />
+              <Typography color={"black"}>30</Typography>
+            </Box>
           </Box>
-        </Toolbar>
-      </AppBar>
-    </>
+          <IconButton>
+            <ShoppingBagOutlinedIcon sx={{ color: "black" }} />
+          </IconButton>
+          <IconButton>
+            <FavoriteBorderOutlinedIcon sx={{ color: "black" }} />
+          </IconButton>
+          <IconButton>
+            <ShoppingCartIcon sx={{ color: "black" }} />
+          </IconButton>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 
