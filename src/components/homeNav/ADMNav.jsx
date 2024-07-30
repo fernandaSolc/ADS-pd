@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import GerenciarTarefas from "../gerenciarTarefas/gerenciarTarefas.jsx";
 import GerenciarPessoas from "../gerenciarPessoas/gerenciarPessoas.jsx";
 import GerenciarLoja from "../gerenciarLoja/gerenciarLoja.jsx";
-
+import GerenciarCalendario from "../gerenciarCalendario/calendario.jsx";
 
 const HomeNavegation = () => {
   const [selectedComponent, setSelectedComponent] = useState(null);
@@ -43,8 +43,8 @@ const HomeNavegation = () => {
           borderRadius: "40px",
           width: "auto",
           height: "auto",
-          minWidth: "60vw",
-          minHeight: "50vh",
+          minWidth: "80vw",
+          minHeight: "70vh",
           display: "flex",
         }}
       >
@@ -52,22 +52,22 @@ const HomeNavegation = () => {
           variant="permanent"
           anchor="left"
           sx={{
-            width: 200,
-            flexShrink: 0,
+            width: 250,
             '& .MuiDrawer-paper': {
-              width: 200,
-              position: 'relative'
+              position: 'relative',
+              
+              
             },
           }}
         >
-           <List sx={{marginTop: 10}}>
+           <List sx={{marginTop: 25}}>
             <ListItem button onClick={() => handleItemClick('gerenciarTarefas')}>
               <AppsIcon sx={{ margin: 1 }} /> <ListItemText primary="Gerenciar tarefas" />
             </ListItem>
             <ListItem button onClick={() => handleItemClick('GerenciarPessoas')}>
               <PermIdentityIcon sx={{ margin: 1 }} /> <ListItemText primary="Pessoas" />
             </ListItem>
-            <ListItem button onClick={() => handleItemClick('eventos')}>
+            <ListItem button onClick={() => handleItemClick('GerenciarCalendario')}>
               <CalendarMonthIcon sx={{ margin: 1 }} /> <ListItemText primary="Eventos" />
             </ListItem>
             <ListItem button onClick={() => handleItemClick('GerenciarLoja')}>
@@ -81,6 +81,7 @@ const HomeNavegation = () => {
           {selectedComponent === 'gerenciarTarefas' && <GerenciarTarefas />}
           {selectedComponent === 'GerenciarPessoas' && <GerenciarPessoas />}
           {selectedComponent === 'GerenciarLoja' && <GerenciarLoja />}
+          {selectedComponent === 'GerenciarCalendario' && <GerenciarCalendario />}
 
         </Box>
 

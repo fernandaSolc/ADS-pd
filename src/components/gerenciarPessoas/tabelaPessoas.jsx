@@ -27,7 +27,7 @@ const rows = [
   createData('Artur Henrique Almeida Magalhaes', 'Desenvolvedor Junior', '01/01/1999', '01/01/1999', <Button contained sx={{borderRadius: '30px', backgroundColor: 'yellow'}}>  Java</Button>, <IconHori/>),
   createData('Arthur Breno Silva Rosa', 'Desenvolvedor Junior', '01/01/1999', '01/01/1999', <Button contained sx={{borderRadius: '30px', backgroundColor: 'yellow'}}>  Java</Button>, <IconHori/>),
   createData('Artur Henrique Almeida Magalhaes', 'Desenvolvedor Junior', '01/01/1999', '01/01/1999', <Button contained sx={{borderRadius: '30px', backgroundColor: 'yellow'}}>  Java</Button>, <IconHori/>),
-  createData('Arthur Breno Silva Rosa', 'Desenvolvedor Junior', '01/01/1999', '01/01/1999', <Button contained sx={{borderRadius: '30px', backgroundColor: 'blue'}}>  PHP</Button>, <IconHori/>),
+  createData('Arthur Breno Silva Rosa', 'Desenvolvedor Junior', '01/01/1999', '01/01/1999', <Button contained sx={{borderRadius: '30px', backgroundColor: 'aqua'}}>  PHP</Button>, <IconHori/>),
   createData('Artur Henrique Almeida Magalhaes', 'Desenvolvedor Junior', '01/01/1999', '01/01/1999', <Button contained sx={{borderRadius: '30px', backgroundColor: 'yellow'}}>  Java</Button>, <IconHori/>),
   createData('Arthur Breno Silva Rosa', 'Desenvolvedor Junior', '01/01/1999', '01/01/1999', <Button contained sx={{borderRadius: '30px', backgroundColor: 'yellow'}}>  Java</Button>,<IconHori/>),
   createData('Artur Henrique Almeida Magalhaes', 'Desenvolvedor Junior', '01/01/1999', '01/01/1999', <Button contained sx={{borderRadius: '30px', backgroundColor: 'yellow'}}>  Java</Button>,<IconHori/>),
@@ -67,7 +67,7 @@ export default function App() {
 
 
 
-      <TableContainer style={{ maxHeight: '50vh', overflow: 'auto', overflowX: 'auto' }}>
+      <TableContainer style={{ maxHeight: '50vh', overflow: 'auto', overflowX: 'auto', marginTop: 30 }}>
         <Table stickyHeader aria-label="sticky table" style={{ minWidth: '65vw', maxWidth: 'auto' }}>
           <TableHead>
             <TableRow>

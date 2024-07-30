@@ -96,7 +96,7 @@ export default function App() {
 
         }}
       >
-        <Typography sx={{ fontSize: 12 }}>
+        <Typography sx={{ fontSize: 20, marginTop: 5, marginBottom: 5 }}>
           <strong>Gerenciador de produtos</strong>
         </Typography>
 
