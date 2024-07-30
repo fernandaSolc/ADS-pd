@@ -1,11 +1,11 @@
 import PerfilCom from "../components/perfil/Perfil.jsx";
-import '../components/perfil/perfil.scss'
+import "../components/perfil/perfil.scss";
 
-function Perfil() {
+function PaginaPerfil() {
   return (
-  <div className="perfilCom">
-    <PerfilCom />
-  </div>
-  )
+    <div className="perfilCom">
+      <PerfilCom />
+    </div>
+  );
 }
-export default Perfil;
+export default PaginaPerfil;
