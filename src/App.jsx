@@ -8,6 +8,7 @@ import PaginaPerfil from "./pages/pagPerfil.jsx";
 import PagCadastro from "./pages/pagCadastro.jsx";
 import PaginaLoja from "./pages/pagLoja.jsx";
 import PaginaIntegrantes from "./pages/pagIntegrantes";
+import PaginaADM from "./pages/pagADM.jsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/perfil" element={<PaginaPerfil />} />
           <Route path="/integrantes" element={<PaginaIntegrantes />} />
           <Route path="/loja" element={<PaginaLoja />} />
+          <Route path="/adm" element={<PaginaADM />} />
         </Routes>
       </Router>
     </div>
