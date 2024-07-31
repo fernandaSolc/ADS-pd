@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
+import 'moment/locale/pt-br';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './agenda.scss';
 
+moment.locale('pt-br'); // Configurando o locale do moment para pt-br
 const localizer = momentLocalizer(moment);
 
 const CLIENT_ID = '1000453594918-ppluvv8due4uloi23i1i6mp6vpdh4vcn.apps.googleusercontent.com';
@@ -104,9 +106,23 @@ function Agenda() {
         startAccessor="start"
         endAccessor="end"
         style={{ height: 600 }}
+        messages={{
+          next: "Próximo",
+          previous: "Anterior",
+          today: "Hoje",
+          month: "Mês",
+          week: "Semana",
+          day: "Dia",
+          agenda: "Agenda",
+          date: "Data",
+          time: "Hora",
+          event: "Evento",
+          noEventsInRange: "Nenhum evento neste intervalo",
+          showMore: total => `+${total} mais`
+        }}
       />
-            <button onClick={handleAuthClick} className="auth-button">Authorize</button>
-            <button onClick={handleSignoutClick} className="signout-button">Sign Out</button>
+          <button onClick={handleAuthClick} className="auth-button">Authorize</button>
+      <button onClick={handleSignoutClick} className="signout-button">Sign Out</button>
     </div>
   );
 }

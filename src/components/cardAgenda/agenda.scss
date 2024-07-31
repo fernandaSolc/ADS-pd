@@ -1,5 +1,5 @@
 .custom-calendar-container {
-    font-family: Arial, sans-serif;
+    font-family:  Raleway;
     text-align: center;
     padding: 20px;
     max-width: 1000px;
@@ -11,7 +11,7 @@
     }
   
     .auth-button, .signout-button {
-      background-color: #4285f4;
+      background-color: #000000;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -26,12 +26,9 @@
     }
   
     .rbc-calendar {
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      overflow: hidden;
-  
       .rbc-toolbar {
         background-color: #f1f3f4;
+        border-radius: 10px;
         padding: 10px;
   
         .rbc-toolbar-label {
@@ -42,7 +39,7 @@
   
       .rbc-event {
         background-color: #4285f4;
-        color: white;
+        color: rgb(251, 253, 227);
         padding: 5px;
         border-radius: 3px;
         font-size: 14px;
