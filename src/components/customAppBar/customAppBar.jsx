@@ -17,9 +17,12 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import Groups3Icon from "@mui/icons-material/Groups3";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const CustomAppBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const open = Boolean(anchorEl);
 
@@ -32,27 +35,35 @@ const CustomAppBar = () => {
   const handleSelectPage = (e) => {
     switch (e.currentTarget.tabIndex) {
       case 0:
-        console.log("ADM");
+        navigate("/adm");
         break;
 
       case 1:
-        console.log("Integrantes");
+        navigate("integrantes");
         break;
 
       case 2:
-        console.log("Loja");
+        navigate("/loja");
         break;
 
       case 3:
-        console.log("Perfil");
+        navigate("/perfil");
         break;
     }
 
     setAnchorEl(null);
   };
 
+  const handleIconClick = () => {
+    location.pathname !== "/inicio" ? navigate("inicio") : null;
+  };
+
   return (
-    <Box marginY="1rem" marginX="0.5rem">
+    <Box
+      marginY="1rem"
+      marginX="0.5rem"
+      display={() => (location.pathname === "/" ? "none" : "flex")}
+    >
       <AppBar position="static" color="transparent">
         <Box
           display={"flex"}
@@ -60,21 +71,33 @@ const CustomAppBar = () => {
           alignItems={"center"}
         >
           {/* TODO Deixar o Arrow Icon visível apenas nas telas necessárias (renderização condicional) */}
-          <IconButton>
+          <IconButton onClick={handleIconClick}>
             <ArrowBackIosNewIcon
-              sx={{ width: "30px", height: "30px", color: "white" }}
+              sx={{
+                width: "30px",
+                height: "30px",
+                color: "white",
+                display: location.pathname === "/inicio" ? "none" : null,
+              }}
+            />
+          </IconButton>
+          <IconButton onClick={() => navigate("/inicio")}>
+            <img
+              width={"50vw"}
+              height={"50vh"}
+              src="src/assets/icons/pd-icon.png"
+              alt="Ícone do Projeto Desenvolve"
             />
           </IconButton>
 
-          <img
-            width={"50vw"}
-            height={"50vh"}
-            src="src/assets/icons/pd-icon.png"
-            alt="Ícone do Projeto Desenvolve"
-          />
-
           <IconButton onClick={handleAnchorEl}>
-            <MenuIcon sx={{ width: "30px", height: "30px", color: "white" }} />
+            <MenuIcon
+              sx={{
+                width: "30px",
+                height: "30px",
+                color: "white",
+              }}
+            />
           </IconButton>
 
           {/* TODO Criar um componente a parte */}

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./assets/fonts/fonts.css";
 import CustomAppBar from "./components/customAppBar/customAppBar";
@@ -14,17 +14,15 @@ function App() {
   return (
     <div className="App">
       <CustomAppBar />
-      <Router>
-        <Routes>
-          <Route path="/" element={<PaginaLogin />} />
-          <Route path="/inicio" element={<PaginaInicial />} />
-          <Route path="/cadastro" element={<PagCadastro />} />
-          <Route path="/perfil" element={<PaginaPerfil />} />
-          <Route path="/integrantes" element={<PaginaIntegrantes />} />
-          <Route path="/loja" element={<PaginaLoja />} />
-          <Route path="/adm" element={<PaginaADM />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<PaginaLogin />} />
+        <Route path="/inicio" element={<PaginaInicial />} />
+        <Route path="/cadastro" element={<PagCadastro />} />
+        <Route path="/perfil" element={<PaginaPerfil />} />
+        <Route path="/integrantes" element={<PaginaIntegrantes />} />
+        <Route path="/loja" element={<PaginaLoja />} />
+        <Route path="/adm" element={<PaginaADM />} />
+      </Routes>
     </div>
   );
 }
