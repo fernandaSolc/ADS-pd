@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import GerenciarTarefas from "../gerenciarTarefas/gerenciarTarefas.jsx";
 import GerenciarPessoas from "../gerenciarPessoas/gerenciarPessoas.jsx";
 import GerenciarLoja from "../gerenciarLoja/gerenciarLoja.jsx";
-import GerenciarCalendario from "../gerenciarCalendario/calendario.jsx";
+
 
 const HomeNavegation = () => {
   const [selectedComponent, setSelectedComponent] = useState(null);
@@ -27,12 +27,7 @@ const HomeNavegation = () => {
       alignItems={"center"}
       gap={3}
     >
-      <img
-        width={"100px"}
-        height={"100px"}
-        src="src/assets/icons/pd-icon.png"
-        alt="Ícone do Projeto Desenvolve"
-      />
+      
 
       <Paper
         elevation={3}
@@ -60,14 +55,14 @@ const HomeNavegation = () => {
             },
           }}
         >
-           <List sx={{marginTop: 25}}>
+           <List sx={{marginTop: 5}}>
             <ListItem button onClick={() => handleItemClick('gerenciarTarefas')}>
               <AppsIcon sx={{ margin: 1 }} /> <ListItemText primary="Gerenciar tarefas" />
             </ListItem>
             <ListItem button onClick={() => handleItemClick('GerenciarPessoas')}>
               <PermIdentityIcon sx={{ margin: 1 }} /> <ListItemText primary="Pessoas" />
             </ListItem>
-            <ListItem button onClick={() => handleItemClick('GerenciarCalendario')}>
+            <ListItem button onClick={() => handleItemClick('')}>
               <CalendarMonthIcon sx={{ margin: 1 }} /> <ListItemText primary="Eventos" />
             </ListItem>
             <ListItem button onClick={() => handleItemClick('GerenciarLoja')}>
@@ -81,7 +76,7 @@ const HomeNavegation = () => {
           {selectedComponent === 'gerenciarTarefas' && <GerenciarTarefas />}
           {selectedComponent === 'GerenciarPessoas' && <GerenciarPessoas />}
           {selectedComponent === 'GerenciarLoja' && <GerenciarLoja />}
-          {selectedComponent === 'GerenciarCalendario' && <GerenciarCalendario />}
+
 
         </Box>
 
