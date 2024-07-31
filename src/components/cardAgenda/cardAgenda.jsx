@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { Calendar, momentLocalizer } from 'react-big-calendar';
+import moment from 'moment';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import './agenda.scss';
+
+const localizer = momentLocalizer(moment);
 
 const CLIENT_ID = '1000453594918-ppluvv8due4uloi23i1i6mp6vpdh4vcn.apps.googleusercontent.com';
 const API_KEY = 'AIzaSyB5W0cAAiiqS_J7l5ua3C84aOHAprxNMKU';
 const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
 const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
 
-function GoogleCalendar() {
+function Agenda() {
   const [gapiInited, setGapiInited] = useState(false);
   const [gisInited, setGisInited] = useState(false);
   const [tokenClient, setTokenClient] = useState(null);
@@ -20,7 +26,7 @@ function GoogleCalendar() {
       const client = window.google.accounts.oauth2.initTokenClient({
         client_id: CLIENT_ID,
         scope: SCOPES,
-        callback: '', // defined later
+        callback: '',
       });
       setTokenClient(client);
       setGisInited(true);
@@ -76,10 +82,14 @@ function GoogleCalendar() {
         timeMin: new Date().toISOString(),
         showDeleted: false,
         singleEvents: true,
-        maxResults: 10,
+        maxResults: 50,
         orderBy: 'startTime',
       });
-      const events = response.result.items;
+      const events = response.result.items.map(event => ({
+        title: event.summary,
+        start: new Date(event.start.dateTime || event.start.date),
+        end: new Date(event.end.dateTime || event.end.date),
+      }));
       setEvents(events);
     } catch (err) {
       console.error(err.message);
@@ -87,34 +97,18 @@ function GoogleCalendar() {
   };
 
   return (
-    <div>
-      <h4>Google Calendar API Quickstart</h4>
-      <button onClick={handleAuthClick}>Authorize</button>
-      <button onClick={handleSignoutClick}>Sign Out</button>
-      <hr />
-      <iframe
-        src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=your_time_zone"
-        style={{ border: 0, width: '100%', height: '600px' }}
-        frameBorder="0"
-        scrolling="no"
-      ></iframe>
-      <div>
-        {events.length === 0 ? (
-          <p>No events found.</p>
-        ) : (
-          <ul>
-            {events.map((event, index) => (
-              <li key={index}>
-                <strong>{event.summary}</strong>
-                <br />
-                {event.start.dateTime || event.start.date}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+    <div className="custom-calendar-container">
+      <Calendar
+        localizer={localizer}
+        events={events}
+        startAccessor="start"
+        endAccessor="end"
+        style={{ height: 600 }}
+      />
+            <button onClick={handleAuthClick} className="auth-button">Authorize</button>
+            <button onClick={handleSignoutClick} className="signout-button">Sign Out</button>
     </div>
   );
 }
 
-export default GoogleCalendar;
+export default Agenda;
