@@ -23,11 +23,31 @@ const CustomAppBar = () => {
 
   const open = Boolean(anchorEl);
 
-  const handleClick = (e) => {
+  // Função para lidar com a ancoragem do menu
+  const handleAnchorEl = (e) => {
     setAnchorEl(e.currentTarget);
   };
 
-  const handleClose = () => {
+  // Função para lidar com a seleção de uma página no menu hambúrguer
+  const handleSelectPage = (e) => {
+    switch (e.currentTarget.tabIndex) {
+      case 0:
+        console.log("ADM");
+        break;
+
+      case 1:
+        console.log("Integrantes");
+        break;
+
+      case 2:
+        console.log("Loja");
+        break;
+
+      case 3:
+        console.log("Perfil");
+        break;
+    }
+
     setAnchorEl(null);
   };
 
@@ -53,15 +73,15 @@ const CustomAppBar = () => {
             alt="Ícone do Projeto Desenvolve"
           />
 
-          <IconButton onClick={handleClick}>
+          <IconButton onClick={handleAnchorEl}>
             <MenuIcon sx={{ width: "30px", height: "30px", color: "white" }} />
           </IconButton>
 
           {/* TODO Criar um componente a parte */}
-          <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+          <Menu anchorEl={anchorEl} open={open} onClose={handleSelectPage}>
             <MenuList>
               {/* TODO Renderização condicional somente para administradores */}
-              <MenuItem onClick={handleClose}>
+              <MenuItem tabIndex={0} onClick={handleSelectPage}>
                 <ListItemIcon>
                   <SettingsIcon sx={{ color: "black" }} />
                 </ListItemIcon>
@@ -75,7 +95,7 @@ const CustomAppBar = () => {
 
               <Divider variant="middle" color="black" />
 
-              <MenuItem onClick={handleClose}>
+              <MenuItem tabIndex={1} onClick={handleSelectPage}>
                 <ListItemIcon>
                   <Groups3Icon sx={{ color: "black" }} />
                 </ListItemIcon>
@@ -89,7 +109,7 @@ const CustomAppBar = () => {
 
               <Divider variant="middle" color="black" />
 
-              <MenuItem onClick={handleClose}>
+              <MenuItem tabIndex={2} onClick={handleSelectPage}>
                 <ListItemIcon>
                   <AttachMoneyIcon sx={{ color: "black" }} />
                 </ListItemIcon>
@@ -103,7 +123,7 @@ const CustomAppBar = () => {
 
               <Divider variant="middle" color="black" />
 
-              <MenuItem onClick={handleClose}>
+              <MenuItem tabIndex={3} onClick={handleSelectPage}>
                 <ListItemIcon>
                   <PermIdentityIcon sx={{ color: "black" }} />
                 </ListItemIcon>
