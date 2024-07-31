@@ -29,7 +29,7 @@ const GerenciarTarefas = () => {
         title="Tarefas Gerais"
         titleTypographyProps={{ variant: 'h6', fontSize: '0.875rem' }}
       />
-      <HoriIcon/>
+      <HoriIcon sx={{position:'relative', marginTop: '6px', right: 5}}/>
       <Fab
         sx={{
           position: 'absolute',
@@ -44,7 +44,7 @@ const GerenciarTarefas = () => {
         <AddIcon sx={{ fontSize: 20 }} />
       </Fab>
     </Box>
-
+  <Box>
     <Box sx={{ backgroundColor: '#D4D4D4', margin: 1, borderRadius: '6px' }}>
       <Box sx={{ height: 50, marginLeft: 1, paddingTop: '0.5px' }}>
         <Typography sx={{ fontSize: 13, marginTop: 1 }}><strong>Marcar reunião semanal</strong></Typography>
@@ -69,6 +69,7 @@ const GerenciarTarefas = () => {
         <Typography sx={{ fontSize: 10 }}><strong>Prazo:</strong> 18/08/2024</Typography>
       </Box>
     </Box>
+  </Box>
   </Card>
   <Card elevation={3} sx={{ width: "20vw", height: "65vh", marginLeft: 5, position: 'relative' }}>
 
@@ -78,7 +79,7 @@ const GerenciarTarefas = () => {
         title="Tarefas Individuais"
         titleTypographyProps={{ variant: 'h6', fontSize: '0.875rem' }}
       />
-<HoriIcon/>
+      <HoriIcon sx={{position:'relative', marginTop: '6px', right: 5}}/>
       <Fab
         sx={{
           position: 'absolute',
@@ -136,7 +137,7 @@ const GerenciarTarefas = () => {
         title="Histórico Semanal"
         titleTypographyProps={{ variant: 'h6', fontSize: '0.875rem' }}
       />
-<HoriIcon/>
+      <HoriIcon sx={{position:'relative', marginTop: '6px', right: 5}}/>
       <Fab
         sx={{
           position: 'absolute',
@@ -159,9 +160,9 @@ const GerenciarTarefas = () => {
       
       <Box sx={{display: 'flex', gap: 20}}>
       <Box sx={{ height: 25, marginLeft: 1 }}>
-        <Typography sx={{ fontSize: 10 }}><strong>Participante:</strong> Geral </Typography>
+        <Typography sx={{ fontSize: 10 }}><strong>Participante:</strong> João </Typography>
       </Box>
-      <Typography sx={{ fontSize: 10 }}><strong>Status:</strong> Concluído </Typography>
+      <Typography sx={{ fontSize: 10}}><strong>Status:</strong> Concluído </Typography>
       </Box>
       
       <Box sx={{ height: 25, marginLeft: 1 }}>
@@ -191,7 +192,7 @@ const GerenciarTarefas = () => {
       
       <Box sx={{display: 'flex', gap: 20}}>
       <Box sx={{ height: 25, marginLeft: 1 }}>
-        <Typography sx={{ fontSize: 10 }}><strong>Participante:</strong> Gustavo </Typography>
+        <Typography sx={{ fontSize: 10 }}><strong>Participante:</strong> João </Typography>
       </Box>
       <Typography sx={{ fontSize: 10 }}><strong>Status:</strong> Concluído </Typography>
       </Box>

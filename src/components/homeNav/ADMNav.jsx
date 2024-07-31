@@ -43,7 +43,7 @@ const HomeNavegation = () => {
           borderRadius: "40px",
           width: "auto",
           height: "auto",
-          minWidth: "80vw",
+          minWidth: "81vw",
           minHeight: "70vh",
           display: "flex",
         }}
