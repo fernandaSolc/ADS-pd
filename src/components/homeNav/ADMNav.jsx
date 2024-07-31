@@ -19,7 +19,6 @@ import Typography from "@mui/material/Typography";
 import GerenciarTarefas from "../gerenciarTarefas/gerenciarTarefas.jsx";
 import GerenciarPessoas from "../gerenciarPessoas/gerenciarPessoas.jsx";
 import GerenciarLoja from "../gerenciarLoja/gerenciarLoja.jsx";
-import GerenciarCalendario from "../gerenciarCalendario/calendario.jsx";
 
 const HomeNavegation = () => {
   const [selectedComponent, setSelectedComponent] = useState(null);
@@ -60,7 +59,7 @@ const HomeNavegation = () => {
             },
           }}
         >
-          <List sx={{ marginTop: 25 }}>
+          <List sx={{ marginTop: 5 }}>
             <ListItem
               button
               onClick={() => handleItemClick("gerenciarTarefas")}
@@ -75,10 +74,7 @@ const HomeNavegation = () => {
               <PermIdentityIcon sx={{ margin: 1 }} />{" "}
               <ListItemText primary="Pessoas" />
             </ListItem>
-            <ListItem
-              button
-              onClick={() => handleItemClick("GerenciarCalendario")}
-            >
+            <ListItem button onClick={() => handleItemClick("")}>
               <CalendarMonthIcon sx={{ margin: 1 }} />{" "}
               <ListItemText primary="Eventos" />
             </ListItem>
@@ -93,9 +89,6 @@ const HomeNavegation = () => {
           {selectedComponent === "gerenciarTarefas" && <GerenciarTarefas />}
           {selectedComponent === "GerenciarPessoas" && <GerenciarPessoas />}
           {selectedComponent === "GerenciarLoja" && <GerenciarLoja />}
-          {selectedComponent === "GerenciarCalendario" && (
-            <GerenciarCalendario />
-          )}
         </Box>
       </Paper>
     </Box>
