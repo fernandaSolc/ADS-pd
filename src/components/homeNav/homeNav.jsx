@@ -2,6 +2,7 @@ import { Box, Paper, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
 import CardSocial from "../cardSocial/cardSocial";
 import CardTools from "../cardTools/tools";
+import Agenda from "../cardAgenda/cardAgenda"
 
 const HomeNavigation = () => {
   const [tabValue, setTabValue] = useState(0);
@@ -13,7 +14,7 @@ const HomeNavigation = () => {
   const renderComponent = (tabValue) => {
     switch (tabValue) {
       case 0:
-        return <h1>Agenda</h1>;
+        return <Agenda />;
 
       case 1:
         return <CardSocial />;
