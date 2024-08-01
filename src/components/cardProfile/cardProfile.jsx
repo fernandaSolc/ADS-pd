@@ -30,7 +30,7 @@ const CardProfile = () => {
             src=""
             alt="Foto de Perfil do Agente"
             variant="rounded"
-            sx={{ width: "9vw", height: "17vh" }}
+            sx={{ width: "6vw", height: "14vh" }}
             onClick={() => navigate("/perfil")}
             style={{ cursor: "pointer" }}
           />
@@ -38,7 +38,7 @@ const CardProfile = () => {
           <Typography
             variant="h3"
             fontFamily={"Raleway, sans-serif"}
-            fontSize={"2.2rem"}
+            fontSize={"1.5rem"}
             fontWeight={"bold"}
             color={"white"}
             onClick={() => navigate("/perfil")}
@@ -50,7 +50,7 @@ const CardProfile = () => {
           <Typography
             variant="h5"
             fontFamily={"Raleway, sans-serif"}
-            fontSize={"1.2rem"}
+            fontSize={"1rem"}
             fontWeight={"bold"}
             color={"white"}
             marginBottom={"1rem"}
@@ -60,7 +60,7 @@ const CardProfile = () => {
         </Box>
 
         {/* Map para percorrer todas as medalhas do Agente */}
-        <Box marginBottom={"1.5rem"} fontSize={"0.7rem"}>
+        <Box marginBottom={"1.5rem"} fontSize={"0.5rem"}>
           <h1>BADGES AQUI!</h1>
         </Box>
 
@@ -82,7 +82,7 @@ const CardProfile = () => {
             variant="h3"
             textAlign={"center"}
             fontFamily={"Raleway, sans-serif"}
-            fontSize={"1.3rem"}
+            fontSize={"1rem"}
             fontWeight={"bold"}
             color={"white"}
           >

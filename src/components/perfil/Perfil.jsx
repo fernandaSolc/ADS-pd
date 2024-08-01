@@ -1,28 +1,30 @@
-import React from 'react';
+import React from "react";
 import "./perfil.scss";
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import ButtonBase from '@mui/material/ButtonBase';
+import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import ButtonBase from "@mui/material/ButtonBase";
 
-const Img = styled('img')({
-  margin: 'auto',
-  display: 'block',
-  maxWidth: '100%',
-  maxHeight: '100%',
+const Img = styled("img")({
+  margin: "auto",
+  display: "block",
+  maxWidth: "100%",
+  maxHeight: "100%",
 });
 
 export default function PerfilCom() {
   return (
     <Paper
       sx={{
-        p: 10,
-        margin: 'auto',
+        p: 7,
+        width: 300,
+        height: 100,
+        margin: "auto",
         maxWidth: 500,
         flexGrow: 1,
         backgroundColor: (theme) =>
-          theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+          theme.palette.mode === "dark" ? "#1A2027" : "#fff",
       }}
     >
       <Grid container spacing={2}>
@@ -45,7 +47,7 @@ export default function PerfilCom() {
               </Typography>
             </Grid>
             <Grid item>
-              <Typography sx={{ cursor: 'pointer' }} variant="body2">
+              <Typography sx={{ cursor: "pointer" }} variant="body2">
                 Remove
               </Typography>
             </Grid>
