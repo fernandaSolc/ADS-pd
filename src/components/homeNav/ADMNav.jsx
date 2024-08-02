@@ -41,6 +41,7 @@ const HomeNavegation = () => {
           minWidth: "83vw",
           minHeight: "85vh",
           display: "flex",
+          
         }}
       >
         <Drawer
@@ -50,6 +51,7 @@ const HomeNavegation = () => {
             width: 250,
             '& .MuiDrawer-paper': {
               position: 'relative',
+              fontSize: '16px',
               
               
             },
