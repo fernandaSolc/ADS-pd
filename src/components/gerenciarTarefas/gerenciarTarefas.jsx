@@ -18,9 +18,22 @@ const GerenciarTarefas = () => {
 
 
 
-<Box component="main" sx={{ padding: 1 }}>
-<Box sx={{ display: 'flex', flexDirection: 'row' }}>
-  <Card elevation={3} sx={{ width: "20vw", height: "65vh", marginLeft: 2, position: 'relative' }}>
+<Box component="main">
+<Box
+        style={{
+          padding: 10,
+          marginLeft: 35,
+          marginBottom: 20,
+
+        }}
+      >
+        <Typography sx={{ fontSize: 20}}>
+          <strong>Gerenciar Tarefas</strong>
+        </Typography>
+
+      </Box> 
+<Box sx={{ display: 'flex', flexDirection: 'row', padding: 3 }}>
+  <Card elevation={3} sx={{ width: "20vw", height: "70vh", marginLeft: 2, position: 'relative' }}>
 
     <Box sx={{ display: 'flex', alignItems: 'center'}}>
       
@@ -71,7 +84,7 @@ const GerenciarTarefas = () => {
     </Box>
   </Box>
   </Card>
-  <Card elevation={3} sx={{ width: "20vw", height: "65vh", marginLeft: 5, position: 'relative' }}>
+  <Card elevation={3} sx={{ width: "20vw", height: "70vh", marginLeft: 5, position: 'relative' }}>
 
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
       <CardHeader
@@ -129,7 +142,7 @@ const GerenciarTarefas = () => {
       </Box>
     </Box>
   </Card>
-  <Card elevation={3} sx={{ width: "20vw", height: "65vh", marginLeft: 5, position: 'relative' }}>
+  <Card elevation={3} sx={{ width: "20vw", height: "70vh", marginLeft: 5, position: 'relative' }}>
 
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
       <CardHeader

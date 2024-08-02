@@ -87,21 +87,21 @@ export default function App() {
   };
 
   return (
-    <Box sx={{ position: "relative", top: -20 }}>
+    <Box>
       <Box
         style={{
-          padding: 10,
+          padding: 2,
           marginLeft: 35,
-          marginBottom: 20,
+          marginBottom: 60,
 
         }}
       >
-        <Typography sx={{ fontSize: 20, marginTop: 5, marginBottom: 5 }}>
-          <strong>Gerenciador de produtos</strong>
+        <Typography sx={{ fontSize: 20}}>
+          <strong>Gerenciar Pessoas</strong>
         </Typography>
 
       </Box> 
-
+      <Box sx={{marginBottom: 5}}>
       <Button contained sx={{ borderRadius: "10px", backgroundColor: "#B6B6B6", marginLeft: 5, color: "#FFFFFF", fontSize: "10px" }}>
       + Adicionar produto
     </Button>
@@ -109,7 +109,7 @@ export default function App() {
     <Button contained sx={{ borderRadius: "10px", backgroundColor: "#808080", marginLeft: 1, color: "#FFFFFF", fontSize: "10px" }}>
       Gerenciar resgates
     </Button>
-
+    </Box>
       <TableContainer
         style={{ maxHeight: "50vh", overflow: "auto", overflowX: "auto" }}
       >

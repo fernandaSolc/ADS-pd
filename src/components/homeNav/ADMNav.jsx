@@ -38,8 +38,8 @@ const HomeNavegation = () => {
           borderRadius: "40px",
           width: "auto",
           height: "auto",
-          minWidth: "81vw",
-          minHeight: "70vh",
+          minWidth: "83vw",
+          minHeight: "85vh",
           display: "flex",
         }}
       >
