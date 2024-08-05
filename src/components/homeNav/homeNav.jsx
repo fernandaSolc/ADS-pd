@@ -41,7 +41,8 @@ const HomeNavigation = () => {
           backgroundColor: "#FFF",
           borderRadius: "40px",
           width: "65vw",
-          height: "80vh",
+          height: "",
+          padding: "10px",
         }}
       >
         <Box marginBottom={3}>

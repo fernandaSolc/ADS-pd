@@ -16,12 +16,12 @@ const CardProfile = () => {
 
   return (
     <Paper
-      elevation={3}
+      elevation={0}
       sx={{
         paddingX: 1,
         paddingY: 3,
         backgroundColor: "rgba(142, 142, 142, 0.3)",
-        borderRadius: "40px",
+        borderRadius: "2 0px",
       }}
     >
       <Box sx={flexStyle}>
