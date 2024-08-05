@@ -2,7 +2,7 @@ import { Box, Paper, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
 import CardSocial from "../cardSocial/cardSocial";
 import CardTools from "../cardTools/tools";
-import Agenda from "../cardAgenda/cardAgenda"
+import Agenda from "../cardAgenda/cardAgenda";
 
 const HomeNavigation = () => {
   const [tabValue, setTabValue] = useState(0);
