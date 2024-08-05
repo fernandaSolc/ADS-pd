@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Calendar, momentLocalizer } from "react-big-calendar";
+import { Calendar, momentLocalizer, Navigate } from "react-big-calendar";
+import TimeGrid from 'react-big-calendar/lib/TimeGrid'
 import moment from "moment";
 import "moment/locale/pt-br";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./agenda.scss";
 
-moment.locale("pt-br"); // Configurando o locale do moment para pt-br
+moment.locale("pt-br");
 const localizer = momentLocalizer(moment);
 
 const CLIENT_ID =
