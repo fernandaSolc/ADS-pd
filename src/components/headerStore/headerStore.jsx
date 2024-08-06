@@ -11,8 +11,10 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import { useNavigate } from "react-router-dom";
 
 const HeaderStore = () => {
+  const navigate = useNavigate();
   return (
     <AppBar
       position="static"
@@ -27,6 +29,7 @@ const HeaderStore = () => {
       <Toolbar>
         <Box marginRight={"15px"}>
           <IconButton
+            onClick={() => navigate("/inicio")}
             sx={{
               bgcolor: "white",
               width: "50px",
