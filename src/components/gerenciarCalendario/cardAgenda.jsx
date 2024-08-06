@@ -4,6 +4,9 @@ import moment from 'moment';
 import 'moment/locale/pt-br';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './agenda.scss';
+import Box from '@mui/material/Box';
+import { Typography } from '@mui/material';
+
 
 moment.locale('pt-br'); // Configurando o locale do moment para pt-br
 const localizer = momentLocalizer(moment);
@@ -99,7 +102,21 @@ function Agenda() {
   };
 
   return (
-    <div className="custom-calendar-container">
+    <Box>
+      <Box
+        style={{
+          padding: 10,
+          marginLeft: 35,
+
+
+        }}
+      >
+        <Typography sx={{ fontSize: 20, marginTop: 0, marginBottom: 0.5 }}>
+          <strong>Gerenciar Calendário</strong>
+        </Typography>
+
+      </Box> 
+    <Box className="custom-calendar-container">
       <Calendar
         localizer={localizer}
         events={events}
@@ -123,7 +140,8 @@ function Agenda() {
       />
           <button onClick={handleAuthClick} className="auth-button">Authorize</button>
       <button onClick={handleSignoutClick} className="signout-button">Sign Out</button>
-    </div>
+    </Box>
+    </Box>
   );
 }
 
