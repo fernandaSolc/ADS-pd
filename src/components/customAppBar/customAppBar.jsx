@@ -64,7 +64,16 @@ const CustomAppBar = () => {
       marginX="0.5rem"
       display={() => (location.pathname === "/" ? "none" : "flex")}
     >
-      <AppBar position="static" color="transparent">
+      <AppBar
+        position="static"
+        color="transparent"
+        sx={{
+          "&.MuiAppBar-root": {
+            border: "none",
+            boxShadow: 0,
+          },
+        }}
+      >
         <Box
           display={"flex"}
           justifyContent={"space-between"}
@@ -110,7 +119,7 @@ const CustomAppBar = () => {
                 </ListItemIcon>
 
                 <ListItemText>
-                  <Typography fontWeight={"bold"} color={"black"}>
+                  <Typography fontWeight={"bold"} color={"#515151"}>
                     Administrador
                   </Typography>
                 </ListItemText>
@@ -124,7 +133,7 @@ const CustomAppBar = () => {
                 </ListItemIcon>
 
                 <ListItemText>
-                  <Typography fontWeight={"bold"} color={"black"}>
+                  <Typography fontWeight={"bold"} color={"#515151"}>
                     Integrantes
                   </Typography>
                 </ListItemText>
@@ -138,7 +147,7 @@ const CustomAppBar = () => {
                 </ListItemIcon>
 
                 <ListItemText>
-                  <Typography fontWeight={"bold"} color={"black"}>
+                  <Typography fontWeight={"bold"} color={"#515151"}>
                     PD Store
                   </Typography>
                 </ListItemText>
@@ -152,7 +161,7 @@ const CustomAppBar = () => {
                 </ListItemIcon>
 
                 <ListItemText>
-                  <Typography fontWeight={"bold"} color={"black"}>
+                  <Typography fontWeight={"bold"} color={"#515151"}>
                     Perfil
                   </Typography>
                 </ListItemText>

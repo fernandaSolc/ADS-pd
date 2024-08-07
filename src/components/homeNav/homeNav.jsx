@@ -15,19 +15,31 @@ const HomeNavigation = () => {
     switch (tabValue) {
       case 0:
         return (
-          <Box maxHeight={"90%"} overflow={"auto"}>
+          <Box maxHeight={"80%"} overflow={"auto"}>
             <Agenda />
           </Box>
         );
 
       case 1:
-        return <CardSocial />;
+        return (
+          <Box maxHeight={"80%"} overflow={"auto"}>
+            <CardSocial />
+          </Box>
+        );
 
       case 2:
-        return <h1>Tarefas</h1>;
+        return (
+          <Box maxHeight={"80%"} overflow={"auto"}>
+            <h1>Tarefas</h1>
+          </Box>
+        );
 
       case 3:
-        return <CardTools />;
+        return (
+          <Box maxHeight={"80%"} overflow={"auto"}>
+            <CardTools />
+          </Box>
+        );
     }
   };
 
@@ -57,11 +69,11 @@ const HomeNavigation = () => {
             sx={{
               "& .MuiTab-root": {
                 fontFamily: "Raleway, sans-serif",
-                fontSize: "1rem",
+                fontSize: "0.8rem",
                 fontWeight: "bold",
                 color: "#292929",
                 paddingX: "0",
-                marginX: "2.3rem",
+                marginX: "2rem",
               },
 
               "& .Mui-selected": {

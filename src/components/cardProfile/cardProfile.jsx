@@ -22,7 +22,10 @@ const CardProfile = () => {
         paddingY: 3,
         backgroundColor: "rgba(142, 142, 142, 0.3)",
         borderRadius: "1.2rem",
-        width: "11vw",
+        minWidth: "12vw", // Ajustar a largura mínima conforme necessário
+        width: "auto", // Deixe o card ajustar automaticamente
+        minHeight: "80vh", // Altura mínima
+        height: "auto", // Altura automática para ajustar ao conteúdo
       }}
     >
       <Box sx={flexStyle}>

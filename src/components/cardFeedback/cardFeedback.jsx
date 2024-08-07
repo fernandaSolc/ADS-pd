@@ -3,7 +3,7 @@ import { Box, Card, CardContent, Divider, Typography } from "@mui/material";
 const CardFeedback = () => {
   return (
     <>
-      <Card sx={{ minHeight: "12vh", width: "10vw" }}>
+      <Card sx={{ minHeight: "10vh", maxWidth: "18vw" }}>
         <CardContent>
           <Box
             display={"flex"}
@@ -52,7 +52,7 @@ const CardFeedback = () => {
             fontWeight={"600"}
             color={"black"}
           >
-            Lorem ipsum dolor sit amet
+            Lorem ipsum dolor sit amet it ametit ametit ametit amet
           </Typography>
         </CardContent>
       </Card>
