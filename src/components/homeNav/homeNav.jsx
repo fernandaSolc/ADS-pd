@@ -2,7 +2,7 @@ import { Box, Paper, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
 import CardSocial from "../cardSocial/cardSocial";
 import CardTools from "../cardTools/tools";
-import Agenda from "../cardAgenda/cardAgenda"
+import Agenda from "../cardAgenda/cardAgenda";
 
 const HomeNavigation = () => {
   const [tabValue, setTabValue] = useState(0);
@@ -41,7 +41,8 @@ const HomeNavigation = () => {
           backgroundColor: "#FFF",
           borderRadius: "40px",
           width: "65vw",
-          height: "80vh",
+          height: "",
+          padding: "10px",
         }}
       >
         <Box marginBottom={3}>

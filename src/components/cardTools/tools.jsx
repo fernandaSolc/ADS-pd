@@ -79,8 +79,8 @@ const CardTools = () => {
     //     </IconButton>
     //   </Box>
     // </Box>
-    <Box width={"100%"} >
-      <Grid container rowSpacing={5} >
+    <Box width={"100%"}>
+      <Grid container rowSpacing={5}>
         {/* TODO Componentizar e criar um map para percorrer todas as ferramentas */}
         <Grid item xs={6}>
           <Box display={"flex"} justifyContent={"center"}>
@@ -95,10 +95,13 @@ const CardTools = () => {
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-              Cadastro de alunos
+                Cadastro de alunos
               </Typography>
 
-              <IconButton href="https://dadosalunos.netlify.app/" target="_blank">
+              <IconButton
+                href="https://dadosalunos.netlify.app/"
+                target="_blank"
+              >
                 <OpenInNewIcon />
               </IconButton>
             </Box>
@@ -118,10 +121,13 @@ const CardTools = () => {
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-              Monitoria
+                Monitoria
               </Typography>
 
-              <IconButton href="https://docs.google.com/spreadsheets/d/18ZIS_edNXyGgP0-jRQ_-5Ikvi_SwQi1AzY4RsRrnSTA/edit?gid=62481219#gid=62481219" target="_blank">
+              <IconButton
+                href="https://docs.google.com/spreadsheets/d/18ZIS_edNXyGgP0-jRQ_-5Ikvi_SwQi1AzY4RsRrnSTA/edit?gid=62481219#gid=62481219"
+                target="_blank"
+              >
                 <OpenInNewIcon />
               </IconButton>
             </Box>
@@ -141,10 +147,13 @@ const CardTools = () => {
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-              Lançamento de notas
+                Lançamento de notas
               </Typography>
 
-              <IconButton href="https://postagem-notas.vercel.app/" target="_blank">
+              <IconButton
+                href="https://postagem-notas.vercel.app/"
+                target="_blank"
+              >
                 <OpenInNewIcon />
               </IconButton>
             </Box>
@@ -164,10 +173,13 @@ const CardTools = () => {
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-              Alunos Itabira
+                Alunos Itabira
               </Typography>
 
-              <IconButton href="https://docs.google.com/spreadsheets/d/1SlSr59cWVKjHfYWKRSwkmTBs8WEatpR5NorefV3pkiM/edit?gid=1966860445#gid=1966860445" target="_blank">
+              <IconButton
+                href="https://docs.google.com/spreadsheets/d/1SlSr59cWVKjHfYWKRSwkmTBs8WEatpR5NorefV3pkiM/edit?gid=1966860445#gid=1966860445"
+                target="_blank"
+              >
                 <OpenInNewIcon />
               </IconButton>
             </Box>
@@ -187,10 +199,13 @@ const CardTools = () => {
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-              Alunos BD
+                Alunos BD
               </Typography>
 
-              <IconButton href="https://docs.google.com/spreadsheets/d/18ZIS_edNXyGgP0-jRQ_-5Ikvi_SwQi1AzY4RsRrnSTA/edit?gid=1671759979#gid=1671759979" target="_blank">
+              <IconButton
+                href="https://docs.google.com/spreadsheets/d/18ZIS_edNXyGgP0-jRQ_-5Ikvi_SwQi1AzY4RsRrnSTA/edit?gid=1671759979#gid=1671759979"
+                target="_blank"
+              >
                 <OpenInNewIcon />
               </IconButton>
             </Box>
@@ -210,10 +225,13 @@ const CardTools = () => {
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-              Notas de alunos
+                Notas de alunos
               </Typography>
 
-              <IconButton href="https://avaliacoespd.vercel.app/" target="_blank">
+              <IconButton
+                href="https://avaliacoespd.vercel.app/"
+                target="_blank"
+              >
                 <OpenInNewIcon />
               </IconButton>
             </Box>
