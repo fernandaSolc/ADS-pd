@@ -55,7 +55,7 @@ const HomeNavigation = () => {
         elevation={3}
         sx={{
           backgroundColor: "#FFF",
-          borderRadius: "40px",
+          borderRadius: "1.2rem",
           width: "60vw",
           height: "80vh",
           padding: "10px",

@@ -7,7 +7,7 @@ const PaginaIntegrantes = () => {
       bgcolor={"white"}
       width={"80vw"}
       height={"80vh"}
-      borderRadius={"42px"}
+      borderRadius={"1.2rem"}
       margin={"auto"}
       paddingX={5}
       paddingY={3}
