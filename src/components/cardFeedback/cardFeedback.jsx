@@ -3,7 +3,7 @@ import { Box, Card, CardContent, Divider, Typography } from "@mui/material";
 const CardFeedback = () => {
   return (
     <>
-      <Card>
+      <Card sx={{ height: "14vh", width: "10vw" }}>
         <CardContent>
           <Box
             display={"flex"}
@@ -13,7 +13,7 @@ const CardFeedback = () => {
           >
             <Typography
               fontFamily={"Raleway, sans-serif"}
-              fontSize={"0.9rem"}
+              fontSize={"0.75rem"}
               fontWeight={"bold"}
               color={"#7D7D7D"}
               paddingBottom={"0.5em"}
@@ -24,7 +24,8 @@ const CardFeedback = () => {
             <Typography
               variant="subtitle1"
               fontFamily={"Raleway, sans-serif"}
-              fontSize={"0.75rem"}
+              fontSize={"0.6rem"}
+              fontWeight={"600"}
               color={"#464646"}
               paddingBottom={"0.5rem"}
             >
@@ -47,7 +48,8 @@ const CardFeedback = () => {
           <Typography
             marginTop={"0.8rem"}
             fontFamily={"Raleway, sans-serif"}
-            fontSize={"1.08rem"}
+            fontSize={"0.8rem"}
+            fontWeight={"600"}
             color={"black"}
           >
             Lorem ipsum dolor sit amet
