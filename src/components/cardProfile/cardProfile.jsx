@@ -21,7 +21,8 @@ const CardProfile = () => {
         paddingX: 1,
         paddingY: 3,
         backgroundColor: "rgba(142, 142, 142, 0.3)",
-        borderRadius: "2 0px",
+        borderRadius: "1.2rem",
+        width: "11vw",
       }}
     >
       <Box sx={flexStyle}>
@@ -30,7 +31,7 @@ const CardProfile = () => {
             src=""
             alt="Foto de Perfil do Agente"
             variant="rounded"
-            sx={{ width: "6vw", height: "14vh" }}
+            sx={{ width: "5vw", height: "10vh" }}
             onClick={() => navigate("/perfil")}
             style={{ cursor: "pointer" }}
           />
@@ -38,7 +39,7 @@ const CardProfile = () => {
           <Typography
             variant="h3"
             fontFamily={"Raleway, sans-serif"}
-            fontSize={"1.5rem"}
+            fontSize={"1.3rem"}
             fontWeight={"bold"}
             color={"white"}
             onClick={() => navigate("/perfil")}
@@ -50,7 +51,7 @@ const CardProfile = () => {
           <Typography
             variant="h5"
             fontFamily={"Raleway, sans-serif"}
-            fontSize={"1rem"}
+            fontSize={"0.9rem"}
             fontWeight={"bold"}
             color={"white"}
             marginBottom={"1rem"}
@@ -60,16 +61,16 @@ const CardProfile = () => {
         </Box>
 
         {/* Map para percorrer todas as medalhas do Agente */}
-        <Box marginBottom={"1.5rem"} fontSize={"0.5rem"}>
+        <Box marginBottom={"1.5rem"} fontSize={"0.4rem"}>
           <h1>BADGES AQUI!</h1>
         </Box>
 
-        <Box width={"100%"}>
+        <Box width={"100%"} sx={{ display: "flex", justifyContent: "center" }}>
           <Divider
             variant="fullWidth"
             sx={{
-              height: "0.5vh",
-              width: "12.5vw",
+              height: "0.2vh",
+              width: "8vw",
               backgroundColor: "white",
               borderRadius: "1rem",
             }}
@@ -86,7 +87,8 @@ const CardProfile = () => {
             fontWeight={"bold"}
             color={"white"}
           >
-            Comentários recentes
+            Comentários
+            <br /> recentes
           </Typography>
 
           <CardFeedback />
