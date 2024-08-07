@@ -18,17 +18,17 @@ const PaginaInicial = () => {
             },
           }}
         >
-          <Grid item xs={12} sm={12} md={2}>
+          <Grid item xs={12} sm={12} md={2} margin={"auto"} marginTop={1.5}>
             <CardProfile />
           </Grid>
 
-          <Grid item xs={12} sm={12} md={8}>
+          <Grid item xs={12} sm={12} md={8} margin={"auto"} marginTop={1.5}>
             <HomeNavigation />
           </Grid>
 
-          <Grid item xs={12} sm={12} md={2}>
+          {/* <Grid item xs={12} sm={12} md={2}>
             <CardTaskBoard />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Box>
     </>

@@ -14,16 +14,32 @@ const HomeNavigation = () => {
   const renderComponent = (tabValue) => {
     switch (tabValue) {
       case 0:
-        return <Agenda />;
+        return (
+          <Box maxHeight={"80%"} overflow={"auto"}>
+            <Agenda />
+          </Box>
+        );
 
       case 1:
-        return <CardSocial />;
+        return (
+          <Box maxHeight={"80%"} overflow={"auto"}>
+            <CardSocial />
+          </Box>
+        );
 
       case 2:
-        return <h1>Tarefas</h1>;
+        return (
+          <Box maxHeight={"80%"} overflow={"auto"}>
+            <h1>Tarefas</h1>
+          </Box>
+        );
 
       case 3:
-        return <CardTools />;
+        return (
+          <Box maxHeight={"80%"} overflow={"auto"}>
+            <CardTools />
+          </Box>
+        );
     }
   };
 
@@ -39,9 +55,9 @@ const HomeNavigation = () => {
         elevation={3}
         sx={{
           backgroundColor: "#FFF",
-          borderRadius: "40px",
-          width: "65vw",
-          height: "",
+          borderRadius: "1.2rem",
+          width: "60vw",
+          height: "80vh",
           padding: "10px",
         }}
       >
@@ -53,11 +69,11 @@ const HomeNavigation = () => {
             sx={{
               "& .MuiTab-root": {
                 fontFamily: "Raleway, sans-serif",
-                fontSize: "1rem",
+                fontSize: "0.8rem",
                 fontWeight: "bold",
                 color: "#292929",
                 paddingX: "0",
-                marginX: "2.3rem",
+                marginX: "2rem",
               },
 
               "& .Mui-selected": {
@@ -80,9 +96,7 @@ const HomeNavigation = () => {
           </Tabs>
         </Box>
 
-        <Box maxHeight={"80%"} overflow={"auto"}>
-          {renderComponent(tabValue)}
-        </Box>
+        {renderComponent(tabValue)}
       </Paper>
     </Box>
   );

@@ -7,14 +7,11 @@ import {
   IconButton,
 } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
-import { useNavigate } from "react-router-dom";
 
 const HeaderStore = () => {
-  const navigate = useNavigate();
   return (
     <AppBar
       position="static"
@@ -27,25 +24,6 @@ const HeaderStore = () => {
       }}
     >
       <Toolbar>
-        <Box marginRight={"15px"}>
-          <IconButton
-            onClick={() => navigate("/inicio")}
-            sx={{
-              bgcolor: "white",
-              width: "50px",
-              height: "50px",
-            }}
-          >
-            <ArrowBackIosNewIcon
-              sx={{
-                width: "30px",
-                height: "30px",
-                color: "black",
-              }}
-            />
-          </IconButton>
-        </Box>
-
         <Typography variant="h6" color="#565151" sx={{ flexGrow: 1 }}>
           Loja de Produtos
         </Typography>

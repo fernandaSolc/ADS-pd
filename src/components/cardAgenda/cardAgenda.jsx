@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, momentLocalizer, Navigate } from "react-big-calendar";
-import TimeGrid from 'react-big-calendar/lib/TimeGrid'
+import TimeGrid from "react-big-calendar/lib/TimeGrid";
 import moment from "moment";
 import "moment/locale/pt-br";
 import "react-big-calendar/lib/css/react-big-calendar.css";
