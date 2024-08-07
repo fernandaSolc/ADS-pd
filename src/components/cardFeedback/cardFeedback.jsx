@@ -52,8 +52,7 @@ const CardFeedback = () => {
             fontWeight={"600"}
             color={"black"}
           >
-            Lorem ipsum dolor sit amet dolor sit amet dolor sit amet dolor sit
-            amet dolor sit amet
+            Lorem ipsum dolor sit amet
           </Typography>
         </CardContent>
       </Card>

@@ -14,7 +14,11 @@ const HomeNavigation = () => {
   const renderComponent = (tabValue) => {
     switch (tabValue) {
       case 0:
-        return <Agenda />;
+        return (
+          <Box maxHeight={"90%"} overflow={"auto"}>
+            <Agenda />
+          </Box>
+        );
 
       case 1:
         return <CardSocial />;
@@ -79,9 +83,7 @@ const HomeNavigation = () => {
           </Tabs>
         </Box>
 
-        <Box maxHeight={"80%"} overflow={"auto"}>
-          {renderComponent(tabValue)}
-        </Box>
+        {renderComponent(tabValue)}
       </Paper>
     </Box>
   );

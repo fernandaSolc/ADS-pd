@@ -1,5 +1,4 @@
 import { Box, Checkbox, Divider, IconButton, Typography } from "@mui/material";
-import FilterListIcon from "@mui/icons-material/FilterList";
 
 const CardTask = () => {
   return (
@@ -7,9 +6,9 @@ const CardTask = () => {
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
-      paddingX={1}
+      paddingX={2}
       paddingY={2}
-      borderRadius={"14px"}
+      borderRadius={"0.6rem"}
       sx={{ backgroundColor: "#F0F0F0" }}
     >
       <Box
@@ -28,12 +27,8 @@ const CardTask = () => {
           fontWeight={"bold"}
           color={"#292929"}
         >
-          Task Category
+          Geral
         </Typography>
-
-        <IconButton edge="end">
-          <FilterListIcon />
-        </IconButton>
       </Box>
 
       <Box width={"100%"}>
@@ -56,11 +51,16 @@ const CardTask = () => {
         gap={0.5}
         paddingTop={2}
       >
-        <Checkbox color="default" />
+        <Checkbox
+          color="default"
+          sx={{
+            transform: "scale(1.0)",
+          }}
+        />
 
         <Typography
           fontFamily={"Raleway, sans-serif"}
-          fontSize={"1rem"}
+          fontSize={"0.9rem"}
           color={"#171717"}
         >
           Tarefa 1
@@ -78,7 +78,7 @@ const CardTask = () => {
 
         <Typography
           fontFamily={"Raleway, sans-serif"}
-          fontSize={"1rem"}
+          fontSize={"0.9rem"}
           color={"#171717"}
         >
           Tarefa 2
@@ -96,7 +96,7 @@ const CardTask = () => {
 
         <Typography
           fontFamily={"Raleway, sans-serif"}
-          fontSize={"1rem"}
+          fontSize={"0.9rem"}
           color={"#171717"}
         >
           Tarefa 3
