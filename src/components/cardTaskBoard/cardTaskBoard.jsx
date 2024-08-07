@@ -6,11 +6,11 @@ const CardTaskBoard = () => {
     <Paper
       elevation={3}
       sx={{
-        paddingX: 1,
+        paddingX: 3,
         paddingY: 3,
-        width: "14.5vw",
+        width: "15.5vw",
         backgroundColor: "rgba(142, 142, 142, 0.3)",
-        borderRadius: "40px",
+        borderRadius: "1.2rem",
       }}
     >
       <Typography
