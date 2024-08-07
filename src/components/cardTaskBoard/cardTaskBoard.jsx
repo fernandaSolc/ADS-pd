@@ -4,7 +4,7 @@ import CardTask from "../cardTask/cardTask";
 const CardTaskBoard = () => {
   return (
     <Paper
-      elevation={3}
+      elevation={0}
       sx={{
         paddingX: 3,
         paddingY: 3,
