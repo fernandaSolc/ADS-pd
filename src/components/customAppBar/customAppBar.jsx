@@ -77,11 +77,7 @@ const CustomAppBar = () => {
                 width: "30px",
                 height: "30px",
                 color: "white",
-                display:
-                  location.pathname === "/inicio" ||
-                  location.pathname === "/loja"
-                    ? "none"
-                    : null,
+                display: location.pathname === "/inicio" ? "none" : null,
               }}
             />
           </IconButton>
@@ -100,7 +96,6 @@ const CustomAppBar = () => {
                 width: "30px",
                 height: "30px",
                 color: "white",
-                display: location.pathname === "/loja" ? "none" : null,
               }}
             />
           </IconButton>
