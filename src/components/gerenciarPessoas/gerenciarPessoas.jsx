@@ -1,11 +1,11 @@
 // GerenciarPessoas.jsx
 import * as React from 'react';
 import Box from '@mui/material/Box';
-
+import Tabela from './tabelaPessoas.jsx';
 import axios from 'axios'; // Certifique-se de instalar axios com `npm install axios`
+import Adicionar from './adicionarPessoas.jsx';  
 
-
-const GerenciarLoja = () => {
+const GerenciarPessoas = () => {
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(null);
@@ -32,10 +32,10 @@ const GerenciarLoja = () => {
     <Box component="main" sx={{ padding: 1, marginLeft: 0 }}>
       <Tabela data={data} />
       <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-
+        <Adicionar/>
       </Box>
     </Box>
   );
 };
 
-export default GerenciarLoja;
+export default GerenciarPessoas;
