@@ -45,8 +45,8 @@ const HomeNavegation = () => {
           borderRadius: "40px",
           width: "auto",
           height: "auto",
-          minWidth: "83vw",
-          minHeight: "85vh",
+          minWidth: "85vw",
+          minHeight: "95vh",
           display: "flex",
         }}
       >
@@ -54,14 +54,14 @@ const HomeNavegation = () => {
           variant="permanent"
           anchor="left"
           sx={{
-            width: 250,
+            width: 300,
             "& .MuiDrawer-paper": {
               position: "relative",
               fontSize: "16px",
             },
           }}
         >
-          <List sx={{ marginTop: 5 }}>
+          <List sx={{ marginTop: 10 }}>
             <ListItem
               button
               onClick={() => handleItemClick("gerenciarTarefas")}

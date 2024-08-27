@@ -1,37 +1,41 @@
+// GerenciarPessoas.jsx
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Tabela from './tabelaPessoas.jsx';
-import { Typography } from '@mui/material';
-const GerenciarPessoas = () => {
+
+import axios from 'axios'; // Certifique-se de instalar axios com `npm install axios`
 
 
+const GerenciarLoja = () => {
+  const [data, setData] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(null);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/funcionarios'); // URL do seu backend
+        setData(response.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
+    <Box component="main" sx={{ padding: 1, marginLeft: 0 }}>
+      <Tabela data={data} />
+      <Box sx={{ display: 'flex', flexDirection: 'row' }}>
 
-<Box component="main" >
-<Box
-        style={{
-          padding: 10,
-          marginLeft: 35,
-          marginBottom: 20,
-
-        }}
-      >
-        <Typography sx={{ fontSize: 20, marginTop: 0, marginBottom: 2 }}>
-          <strong>Gerenciar Pessoas</strong>
-        </Typography>
-
-      </Box> 
-<Tabela />
-
-
-
-<Box sx={{ display: 'flex', flexDirection: 'row' }}>
-
-</Box>
-</Box>
-
-);
+      </Box>
+    </Box>
+  );
 };
 
-export default GerenciarPessoas;
+export default GerenciarLoja;

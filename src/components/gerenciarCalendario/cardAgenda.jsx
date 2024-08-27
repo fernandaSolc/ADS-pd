@@ -122,7 +122,7 @@ function Agenda() {
         events={events}
         startAccessor="start"
         endAccessor="end"
-        style={{ height: 600 }}
+        style={{ height: 600, width: "65vw" }}
         messages={{
           next: "Próximo",
           previous: "Anterior",
