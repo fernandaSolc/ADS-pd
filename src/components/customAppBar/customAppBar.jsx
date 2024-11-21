@@ -102,7 +102,7 @@ const CustomAppBar = () => {
             <img
               width={"50vw"}
               height={"50vh"}
-              src="src/assets/icons/pd-icon.png"
+              src="src/assets/pd-icon.svg"
               alt="Ícone do Projeto Desenvolve"
             />
           </IconButton>

@@ -125,7 +125,7 @@ const CardTools = () => {
               </Typography>
 
               <IconButton
-                href="https://dadosalunos.netlify.app/"
+                href="https://dados-alunos.pdinfinita.com.br/"
                 target="_blank"
               >
                 <OpenInNewIcon />
@@ -174,7 +174,7 @@ const CardTools = () => {
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-                Lançamento de notas
+                Lançamento de notas(inutil)
               </Typography>
 
               <IconButton
@@ -226,7 +226,7 @@ const CardTools = () => {
               borderRadius={"8px"}
             >
               <Typography flex={1} textAlign={"center"}>
-                Notas de alunos
+                Notas de alunos (inutil)
               </Typography>
 
               <IconButton

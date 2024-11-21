@@ -12,11 +12,11 @@ const ProductCard = ({ product }) => {
     <Card sx={{ minWidth: 215 }}>
       <CardMedia
         component="img"
-        height="140"
-        image={product.image}
+        height="100"
+        image={product.image} 
         alt={product.name}
       />
-      <CardContent sx={{ paddingX: "8px" }}>
+      <CardContent sx={{ paddingX: "8px", height:'70' }}>
         <Box display="flex" justifyContent={"space-around"}>
           <Box
             display={"flex"}

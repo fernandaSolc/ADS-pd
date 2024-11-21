@@ -1,5 +1,6 @@
 import { Box, Paper, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
+import CardTaskBoard from "../cardTaskBoard/cardTaskBoard"
 import CardSocial from "../cardSocial/cardSocial";
 import CardTools from "../cardTools/tools";
 import Agenda from "../cardAgenda/cardAgenda";
@@ -30,7 +31,7 @@ const HomeNavigation = () => {
       case 2:
         return (
           <Box maxHeight={"80%"} overflow={"auto"}>
-            <h1>Tarefas</h1>
+            <CardTaskBoard/>
           </Box>
         );
 

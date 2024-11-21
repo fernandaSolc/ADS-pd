@@ -12,7 +12,7 @@ const PaginaInicial = () => {
         <Grid item xs={8}>
           <HomeNavegation />
         </Grid>
-
+      
         <Grid item xs></Grid>
       </Grid>
     </Box>

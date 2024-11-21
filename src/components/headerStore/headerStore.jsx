@@ -20,6 +20,7 @@ const HeaderStore = () => {
           backgroundColor: "lightgray",
           borderBottomRightRadius: "15px",
           borderBottomLeftRadius: "15px",
+          borderRadius:"15px"
         },
       }}
     >
