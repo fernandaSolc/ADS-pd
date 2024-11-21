@@ -10,8 +10,8 @@ const PaginaLoja = () => {
       margin={"auto"}
       bgcolor={"white"}
       sx={{
-        borderBottomRightRadius: "15px",
-        borderBottomLeftRadius: "15px",
+        borderRadius:'15px'
+        
       }}
     >
       <HeaderStore />

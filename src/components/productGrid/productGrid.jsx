@@ -26,9 +26,9 @@ const products = [
 
 const ProductGrid = () => {
   return (
-    <Grid container spacing={2} justifyContent="center" sx={{ padding: 2 }}>
+    <Grid container spacing={2} justifyContent="center" sx={{ padding: 2 , maxHeight: "150px" }}>
       {products.map((product, index) => (
-        <Grid item key={index} md={3}>
+        <Grid item key={index} md={5}>
           <ProductCard product={product} />
         </Grid>
       ))}
