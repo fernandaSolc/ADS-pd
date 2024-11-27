@@ -20,9 +20,8 @@ export default function PerfilCom() {
           direction="column"
           gap="20px"
           sx={{
-            width: "100%",
+            width: "100vh",
             maxWidth: "400px",
-            height: "auto",
             py: "60px",
           }}
         >
