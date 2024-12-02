@@ -158,7 +158,7 @@ const GerenciarTarefas = () => {
           elevation={3}
           sx={{
             width: "20vw",
-            height: "70vh",
+            height: "70vh", // Altura fixa do card
             marginLeft: 2,
             position: "relative",
           }}
@@ -185,40 +185,67 @@ const GerenciarTarefas = () => {
             </Fab>
           </Box>
 
-          {/* Exibe as tarefas gerais */}
-          {tarefas
-            .filter((tarefa) => tarefa.tipo === "Tarefas Gerais")
-            .map((tarefa) => (
-              <Box
-                key={tarefa.id}
-                sx={{
-                  backgroundColor: "#D4D4D4",
-                  margin: 1,
-                  borderRadius: "6px",
-                  padding: 1,
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Box>
-                  <Typography sx={{ fontSize: 13, fontWeight: "bold" }}>
-                    {tarefa.titulo}
-                  </Typography>
-                  <Typography sx={{ fontSize: 10 }}>
-                    <strong>Prazo:</strong> {formatarData(tarefa.prazo)}
-                  </Typography>
-                  <Typography sx={{ fontSize: 10 }}>
-                    <strong>Status:</strong> {tarefa.status}
-                  </Typography>
-                  <Typography sx={{ fontSize: 10 }}>
-                    <strong>Prioridade:</strong> {tarefa.prioridade}
-                  </Typography>
+          {/* Box com rolagem para exibir as tarefas gerais */}
+          <Box
+            sx={{
+              maxHeight: "calc(70vh - 60px)", // Altura do Box considerando o CardHeader
+              overflowY: "auto", // Habilita a rolagem vertical
+              padding: "0 1rem", // Padding para o conteúdo não ficar colado nas bordas
+              "&::-webkit-scrollbar": {
+                width: "12px", // Largura maior da barra de rolagem
+              },
+              "&::-webkit-scrollbar-thumb": {
+                backgroundColor: "#D4D4D4", // Cor do thumb (parte movível) com o mesmo cinza claro dos cards
+                borderRadius: "6px", // Borda arredondada
+                border: "3px solid #fff", // Borda ao redor do thumb
+              },
+              "&::-webkit-scrollbar-thumb:hover": {
+                backgroundColor: "#A0A0A0", // Cor do thumb ao passar o mouse (um cinza um pouco mais escuro)
+              },
+              "&::-webkit-scrollbar-track": {
+                backgroundColor: "transparent", // Remove o fundo cinza claro do track
+                borderRadius: "6px", // Borda arredondada do track
+              },
+              "&::-webkit-scrollbar-track:hover": {
+                backgroundColor: "transparent", // Remove o fundo ao passar o mouse
+              },
+            }}
+          >
+            {/* Exibe as tarefas gerais */}
+            {tarefas
+              .filter((tarefa) => tarefa.tipo === "Tarefas Gerais")
+              .map((tarefa) => (
+                <Box
+                  key={tarefa.id}
+                  sx={{
+                    backgroundColor: "#D4D4D4",
+                    margin: 1,
+                    borderRadius: "6px",
+                    padding: 1,
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box>
+                    <Typography sx={{ fontSize: 13, fontWeight: "bold" }}>
+                      {tarefa.titulo}
+                    </Typography>
+                    <Typography sx={{ fontSize: 10 }}>
+                      <strong>Prazo:</strong> {formatarData(tarefa.prazo)}
+                    </Typography>
+                    <Typography sx={{ fontSize: 10 }}>
+                      <strong>Status:</strong> {tarefa.status}
+                    </Typography>
+                    <Typography sx={{ fontSize: 10 }}>
+                      <strong>Prioridade:</strong> {tarefa.prioridade}
+                    </Typography>
+                  </Box>
+                  <IconButton onClick={(e) => handleMenuOpen(e, tarefa)}>
+                    <MoreVertIcon />
+                  </IconButton>
                 </Box>
-                <IconButton onClick={(e) => handleMenuOpen(e, tarefa)}>
-                  <MoreVertIcon />
-                </IconButton>
-              </Box>
-            ))}
+              ))}
+          </Box>
         </Card>
 
         {/* Card Tarefas Individuais */}
@@ -226,7 +253,7 @@ const GerenciarTarefas = () => {
           elevation={3}
           sx={{
             width: "20vw",
-            height: "70vh",
+            height: "70vh", // Altura fixa do card
             marginLeft: 5,
             position: "relative",
           }}
@@ -253,44 +280,71 @@ const GerenciarTarefas = () => {
             </Fab>
           </Box>
 
-          {/* Exibe as tarefas individuais */}
-          {tarefas
-            .filter((tarefa) => tarefa.tipo === "Tarefas Individuais")
-            .map((tarefa) => (
-              <Box
-                key={tarefa.id}
-                sx={{
-                  backgroundColor: "#D4D4D4",
-                  margin: 1,
-                  borderRadius: "6px",
-                  padding: 1,
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Box>
-                  <Typography sx={{ fontSize: 13, fontWeight: "bold" }}>
-                    {tarefa.titulo}
-                  </Typography>
-                  <Typography sx={{ fontSize: 10 }}>
-                    <strong>Participante:</strong>{" "}
-                    {tarefa.participante || "N/A"}
-                  </Typography>
-                  <Typography sx={{ fontSize: 10 }}>
-                    <strong>Prazo:</strong> {formatarData(tarefa.prazo)}
-                  </Typography>
-                  <Typography sx={{ fontSize: 10 }}>
-                    <strong>Status:</strong> {tarefa.status}
-                  </Typography>
-                  <Typography sx={{ fontSize: 10 }}>
-                    <strong>Prioridade:</strong> {tarefa.prioridade}
-                  </Typography>
+          {/* Box com rolagem para exibir as tarefas individuais */}
+          <Box
+            sx={{
+              maxHeight: "calc(70vh - 60px)", // Altura do Box considerando o CardHeader
+              overflowY: "auto", // Habilita a rolagem vertical
+              padding: "0 1rem", // Padding para o conteúdo não ficar colado nas bordas
+              "&::-webkit-scrollbar": {
+                width: "12px", // Largura maior da barra de rolagem
+              },
+              "&::-webkit-scrollbar-thumb": {
+                backgroundColor: "#D4D4D4", // Cor do thumb (parte movível) com o mesmo cinza claro dos cards
+                borderRadius: "6px", // Borda arredondada
+                border: "3px solid #fff", // Borda ao redor do thumb
+              },
+              "&::-webkit-scrollbar-thumb:hover": {
+                backgroundColor: "#A0A0A0", // Cor do thumb ao passar o mouse (um cinza um pouco mais escuro)
+              },
+              "&::-webkit-scrollbar-track": {
+                backgroundColor: "transparent", // Remove o fundo cinza claro do track
+                borderRadius: "6px", // Borda arredondada do track
+              },
+              "&::-webkit-scrollbar-track:hover": {
+                backgroundColor: "transparent", // Remove o fundo ao passar o mouse
+              },
+            }}
+          >
+            {/* Exibe as tarefas individuais */}
+            {tarefas
+              .filter((tarefa) => tarefa.tipo === "Tarefas Individuais")
+              .map((tarefa) => (
+                <Box
+                  key={tarefa.id}
+                  sx={{
+                    backgroundColor: "#D4D4D4",
+                    margin: 1,
+                    borderRadius: "6px",
+                    padding: 1,
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box>
+                    <Typography sx={{ fontSize: 13, fontWeight: "bold" }}>
+                      {tarefa.titulo}
+                    </Typography>
+                    <Typography sx={{ fontSize: 10 }}>
+                      <strong>Participante:</strong>{" "}
+                      {tarefa.participante || "N/A"}
+                    </Typography>
+                    <Typography sx={{ fontSize: 10 }}>
+                      <strong>Prazo:</strong> {formatarData(tarefa.prazo)}
+                    </Typography>
+                    <Typography sx={{ fontSize: 10 }}>
+                      <strong>Status:</strong> {tarefa.status}
+                    </Typography>
+                    <Typography sx={{ fontSize: 10 }}>
+                      <strong>Prioridade:</strong> {tarefa.prioridade}
+                    </Typography>
+                  </Box>
+                  <IconButton onClick={(e) => handleMenuOpen(e, tarefa)}>
+                    <MoreVertIcon />
+                  </IconButton>
                 </Box>
-                <IconButton onClick={(e) => handleMenuOpen(e, tarefa)}>
-                  <MoreVertIcon />
-                </IconButton>
-              </Box>
-            ))}
+              ))}
+          </Box>
         </Card>
 
         {/* Card Histórico Semanal */}
@@ -298,7 +352,7 @@ const GerenciarTarefas = () => {
           elevation={3}
           sx={{
             width: "20vw",
-            height: "70vh",
+            height: "70vh", // Altura fixa do card
             marginLeft: 5,
             position: "relative",
           }}
@@ -311,39 +365,66 @@ const GerenciarTarefas = () => {
             />
           </Box>
 
-          {/* Exibe todas as tarefas no histórico semanal */}
-          {tarefas.map((tarefa) => (
-            <Box
-              key={tarefa.id}
-              sx={{
-                backgroundColor: "#D4D4D4",
-                margin: 1,
-                borderRadius: "6px",
-                padding: 1,
-              }}
-            >
-              <Typography sx={{ fontSize: 13, fontWeight: "bold" }}>
-                {tarefa.titulo}
-              </Typography>
-              <Typography sx={{ fontSize: 10 }}>
-                <strong>Tipo:</strong> {tarefa.tipo}
-              </Typography>
-              {tarefa.participante && (
-                <Typography sx={{ fontSize: 10 }}>
-                  <strong>Participante:</strong> {tarefa.participante}
+          {/* Box com overflow para rolagem, envolvido diretamente pelas tarefas */}
+          <Box
+            sx={{
+              maxHeight: "calc(70vh - 60px)", // Altura do Box considerando o CardHeader
+              overflowY: "auto", // Habilita a rolagem vertical
+              padding: "0 1rem", // Padding para o conteúdo não ficar colado nas bordas
+              "&::-webkit-scrollbar": {
+                width: "12px", // Largura maior da barra de rolagem
+              },
+              "&::-webkit-scrollbar-thumb": {
+                backgroundColor: "#D4D4D4", // Cor do thumb (parte movível) com o mesmo cinza claro dos cards
+                borderRadius: "6px", // Borda arredondada
+                border: "3px solid #fff", // Borda ao redor do thumb
+              },
+              "&::-webkit-scrollbar-thumb:hover": {
+                backgroundColor: "#A0A0A0", // Cor do thumb ao passar o mouse (um cinza um pouco mais escuro)
+              },
+              "&::-webkit-scrollbar-track": {
+                backgroundColor: "transparent", // Remove o fundo cinza claro do track
+                borderRadius: "6px", // Borda arredondada do track
+              },
+              "&::-webkit-scrollbar-track:hover": {
+                backgroundColor: "transparent", // Remove o fundo ao passar o mouse
+              },
+            }}
+          >
+            {/* Exibe todas as tarefas no histórico semanal */}
+            {tarefas.map((tarefa) => (
+              <Box
+                key={tarefa.id}
+                sx={{
+                  backgroundColor: "#D4D4D4",
+                  margin: 1,
+                  borderRadius: "6px",
+                  padding: 1,
+                }}
+              >
+                <Typography sx={{ fontSize: 13, fontWeight: "bold" }}>
+                  {tarefa.titulo}
                 </Typography>
-              )}
-              <Typography sx={{ fontSize: 10 }}>
-                <strong>Prazo:</strong> {formatarData(tarefa.prazo)}
-              </Typography>
-              <Typography sx={{ fontSize: 10 }}>
-                <strong>Status:</strong> {tarefa.status}
-              </Typography>
-              <Typography sx={{ fontSize: 10 }}>
-                <strong>Prioridade:</strong> {tarefa.prioridade}
-              </Typography>
-            </Box>
-          ))}
+                <Typography sx={{ fontSize: 10 }}>
+                  <strong>Tipo:</strong> {tarefa.tipo}
+                </Typography>
+                {tarefa.participante && (
+                  <Typography sx={{ fontSize: 10 }}>
+                    <strong>Participante:</strong> {tarefa.participante}
+                  </Typography>
+                )}
+                <Typography sx={{ fontSize: 10 }}>
+                  <strong>Prazo:</strong> {formatarData(tarefa.prazo)}
+                </Typography>
+                <Typography sx={{ fontSize: 10 }}>
+                  <strong>Status:</strong> {tarefa.status}
+                </Typography>
+                <Typography sx={{ fontSize: 10 }}>
+                  <strong>Prioridade:</strong> {tarefa.prioridade}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
         </Card>
       </Box>
 
