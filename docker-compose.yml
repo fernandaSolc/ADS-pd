@@ -1,0 +1,42 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nestjs_backend
+    restart: always
+    ports:
+      - "4000:4000" # Porta do backend exposta no host
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./keys:/app/keys # Monta a pasta com as chaves no container
+    depends_on:
+      - postgres
+    environment:
+      NODE_ENV: development # Define o ambiente como desenvolvimento
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: 123@
+      DATABASE_NAME: backend_db
+      GOOGLE_CLIENT_ID: 263227313262-71s40la80a31vkcnttbjl25reh0q3hl9.apps.googleusercontent.com
+      GOOGLE_CLIENT_SECRET: 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
+      JWT_PRIVATE_KEY_PATH: /app/keys/private.key # Caminho para a chave privada no container
+      JWT_PUBLIC_KEY_PATH: /app/keys/public.key  # Caminho para a chave pública no container
+
+  postgres:
+    image: postgres:17
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123@
+      POSTGRES_DB: backend_db
+    ports:
+      - "5434:5432" # Porta do PostgreSQL exposta no host
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
