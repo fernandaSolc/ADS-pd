@@ -20,8 +20,8 @@ services:
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: 123@
       DATABASE_NAME: backend_db
-      GOOGLE_CLIENT_ID: 263227313262-71s40la80a31vkcnttbjl25reh0q3hl9.apps.googleusercontent.com
-      GOOGLE_CLIENT_SECRET: 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
+      GOOGLE_CLIENT_ID: trocarid
+      GOOGLE_CLIENT_SECRET: trocarsecret
       JWT_PRIVATE_KEY_PATH: /app/keys/private.key # Caminho para a chave privada no container
       JWT_PUBLIC_KEY_PATH: /app/keys/public.key  # Caminho para a chave pública no container
 
