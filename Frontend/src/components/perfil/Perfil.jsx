@@ -5,14 +5,54 @@ import {
   Container,
   Stack,
   Typography,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  TextField,
 } from "@mui/material";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./perfil.scss";
 import { CavaloIcon } from "../../../public/icon/cavalo";
 import PDLogoSimple from "../../assets/pd-icon.svg";
 import * as Tabs from "@radix-ui/react-tabs";
 
 export default function PerfilCom() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [destinatario, setDestinatario] = useState("");
+  const [quantidade, setQuantidade] = useState("");
+  const [mensagem, setMensagem] = useState("");
+  const [historicoTrocas, setHistoricoTrocas] = useState([]);
+
+  // Carregar histórico do localStorage ao iniciar
+  useEffect(() => {
+    const historicoSalvo =
+      JSON.parse(localStorage.getItem("historicoTrocas")) || [];
+    setHistoricoTrocas(historicoSalvo);
+  }, []);
+
+  // Função para enviar moedas
+  const enviarMoedas = () => {
+    const novaEntrada = {
+      remetente: "Usuário Atual", // Pode ser substituído pelo nome real do usuário logado
+      destinatario,
+      quantidade,
+      mensagem,
+      data: new Date().toISOString(),
+    };
+
+    // Atualiza o histórico no estado e no localStorage
+    const novoHistorico = [novaEntrada, ...historicoTrocas];
+    setHistoricoTrocas(novoHistorico);
+    localStorage.setItem("historicoTrocas", JSON.stringify(novoHistorico));
+
+    // Fechar o modal e limpar os campos
+    setModalOpen(false);
+    setDestinatario("");
+    setQuantidade("");
+    setMensagem("");
+  };
+
   return (
     <Container className="background-container">
       <Stack direction="row" gap="20px" px="30px">
@@ -118,6 +158,7 @@ export default function PerfilCom() {
                 heigh={30}
               />
               <Button
+                onClick={() => setModalOpen(true)}
                 sx={{
                   color: "#F0E7E7",
                   fontSize: "12px",
@@ -193,6 +234,39 @@ export default function PerfilCom() {
           </Card>
         </Stack>
       </Stack>
+
+      {/* Modal para Enviar Moedas */}
+      <Dialog open={modalOpen} onClose={() => setModalOpen(false)}>
+        <DialogTitle>Enviar Moedas</DialogTitle>
+        <DialogContent>
+          <TextField
+            label="Destinatário"
+            fullWidth
+            margin="normal"
+            value={destinatario}
+            onChange={(e) => setDestinatario(e.target.value)}
+          />
+          <TextField
+            label="Quantidade de Moedas"
+            fullWidth
+            margin="normal"
+            type="number"
+            value={quantidade}
+            onChange={(e) => setQuantidade(e.target.value)}
+          />
+          <TextField
+            label="Mensagem"
+            fullWidth
+            margin="normal"
+            value={mensagem}
+            onChange={(e) => setMensagem(e.target.value)}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setModalOpen(false)}>Cancelar</Button>
+          <Button onClick={enviarMoedas}>Enviar</Button>
+        </DialogActions>
+      </Dialog>
     </Container>
   );
 }
