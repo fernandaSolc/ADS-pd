@@ -1,30 +1,59 @@
-import { Paper, Typography } from "@mui/material";
+import { Paper, Typography, Box } from "@mui/material";
+import { useEffect, useState } from "react";
 import CardTask from "../cardTask/cardTask";
 
 const CardTaskBoard = () => {
+  const [tarefas, setTarefas] = useState([]);
+
+  // Carregar tarefas do localStorage
+  useEffect(() => {
+    const tarefasSalvas = JSON.parse(localStorage.getItem("tarefas")) || [];
+    setTarefas(tarefasSalvas);
+  }, []);
+
   return (
     <Paper
-      elevation={0}
+      elevation={3}
       sx={{
-        paddingX: 3,
-        paddingY: 3,
-        width: "15.5vw",
-        backgroundColor: "rgba(142, 142, 142, 0.3)",
-        borderRadius: "1.2rem",
+        padding: "1.5rem",
+        backgroundColor: "#F9F9F9",
+        borderRadius: "1.5rem",
+        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+        overflow: "hidden",
       }}
     >
       <Typography
-        marginBottom={"0.5rem"}
-        variant="h3"
-        textAlign={"center"}
-        fontFamily={"Righteous, sans-serif"}
-        fontSize={"1.3rem"}
-        color={"white"}
+        variant="h4"
+        textAlign="center"
+        fontFamily="Raleway, sans-serif"
+        fontWeight="bold"
+        marginBottom="1.5rem"
+        color="#333"
       >
-        TAREFAS
+        Minhas Tarefas
       </Typography>
 
-      <CardTask />
+      <Box
+        display="flex"
+        flexDirection="column"
+        gap="1rem"
+        overflow="auto"
+        maxHeight="60vh"
+        paddingX="0.5rem"
+      >
+        {tarefas.length > 0 ? (
+          tarefas.map((tarefa) => <CardTask key={tarefa.id} tarefa={tarefa} />)
+        ) : (
+          <Typography
+            textAlign="center"
+            color="#666"
+            fontSize="0.9rem"
+            fontFamily="Raleway, sans-serif"
+          >
+            Nenhuma tarefa disponível.
+          </Typography>
+        )}
+      </Box>
     </Paper>
   );
 };

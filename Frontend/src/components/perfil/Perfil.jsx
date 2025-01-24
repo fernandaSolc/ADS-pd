@@ -19,6 +19,14 @@ import * as Tabs from "@radix-ui/react-tabs";
 
 export default function PerfilCom() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [editProfileModalOpen, setEditProfileModalOpen] = useState(false);
+  const [nome, setNome] = useState("Dev Pleno");
+  const [email, setEmail] = useState("devpleno@exemplo.com");
+  const [dataNascimento, setDataNascimento] = useState("18/09/2001");
+  const [novoNome, setNovoNome] = useState(nome);
+  const [novoEmail, setNovoEmail] = useState(email);
+  const [novaDataNascimento, setNovaDataNascimento] = useState(dataNascimento);
+
   const [destinatario, setDestinatario] = useState("");
   const [quantidade, setQuantidade] = useState("");
   const [mensagem, setMensagem] = useState("");
@@ -53,6 +61,14 @@ export default function PerfilCom() {
     setMensagem("");
   };
 
+  // Função para salvar as edições no perfil
+  const salvarEdicoes = () => {
+    setNome(novoNome);
+    setEmail(novoEmail);
+    setDataNascimento(novaDataNascimento);
+    setEditProfileModalOpen(false);
+  };
+
   return (
     <Container className="background-container">
       <Stack direction="row" gap="20px" px="30px">
@@ -60,7 +76,7 @@ export default function PerfilCom() {
           direction="column"
           gap="20px"
           sx={{
-            width: "100vh",
+            width: "100vw",
             maxWidth: "400px",
             py: "60px",
           }}
@@ -88,9 +104,10 @@ export default function PerfilCom() {
                 fontFamily={"Raleway, sans-serif"}
                 sx={{
                   pb: "30px",
+                  paddingTop: "20px",
                 }}
               >
-                Dev Pleno
+                {nome}
               </Typography>
               <Typography
                 variant="body1"
@@ -100,14 +117,14 @@ export default function PerfilCom() {
                   pb: "10px",
                 }}
               >
-                devpleno@exemplo.com
+                {email}
               </Typography>
               <Typography
                 variant="body1"
                 color="#F0E7E7"
                 fontFamily={"Raleway, sans-serif"}
               >
-                18/09/2001
+                {dataNascimento}
               </Typography>
             </Stack>
             <Stack alignItems="end" pt="20px">
@@ -121,6 +138,7 @@ export default function PerfilCom() {
                     transform: "scale(.9)",
                   },
                 }}
+                onClick={() => setEditProfileModalOpen(true)}
               >
                 Editar perfil
               </Button>
@@ -234,6 +252,43 @@ export default function PerfilCom() {
           </Card>
         </Stack>
       </Stack>
+
+      {/* Modal para Editar Perfil */}
+      <Dialog
+        open={editProfileModalOpen}
+        onClose={() => setEditProfileModalOpen(false)}
+      >
+        <DialogTitle>Editar Perfil</DialogTitle>
+        <DialogContent>
+          <TextField
+            label="Nome"
+            fullWidth
+            margin="normal"
+            value={novoNome}
+            onChange={(e) => setNovoNome(e.target.value)}
+          />
+          <TextField
+            label="E-mail"
+            fullWidth
+            margin="normal"
+            value={novoEmail}
+            onChange={(e) => setNovoEmail(e.target.value)}
+          />
+          <TextField
+            label="Data de Nascimento"
+            fullWidth
+            margin="normal"
+            value={novaDataNascimento}
+            onChange={(e) => setNovaDataNascimento(e.target.value)}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setEditProfileModalOpen(false)}>
+            Cancelar
+          </Button>
+          <Button onClick={salvarEdicoes}>Salvar</Button>
+        </DialogActions>
+      </Dialog>
 
       {/* Modal para Enviar Moedas */}
       <Dialog open={modalOpen} onClose={() => setModalOpen(false)}>

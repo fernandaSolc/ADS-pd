@@ -1,107 +1,59 @@
-import { Box, Checkbox, Divider, IconButton, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 
-const CardTask = () => {
+const CardTask = ({ tarefa }) => {
   return (
     <Box
-      display={"flex"}
-      flexDirection={"column"}
-      justifyContent={"center"}
-      paddingX={2}
-      paddingY={2}
-      borderRadius={"0.6rem"}
-      sx={{ backgroundColor: "#F0F0F0" }}
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+      padding="1rem"
+      borderRadius="1rem"
+      sx={{
+        backgroundColor: "#FFF",
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
+        border: "1px solid #E0E0E0",
+      }}
     >
-      <Box
-        id="task-header"
-        display={"flex"}
-        justifyContent={"space-between"}
-        alignItems={"center"}
+      <Typography
+        variant="h6"
+        textAlign="center"
+        fontWeight="bold"
+        color="#333"
+        marginBottom="0.5rem"
+        fontFamily="Raleway, sans-serif"
       >
-        <Typography
-          variant="h5"
-          flex={1}
-          marginBottom={"0.5rem"}
-          textAlign={"center"}
-          fontFamily={"Raleway, sans-serif"}
-          fontSize={"1rem "}
-          fontWeight={"bold"}
-          color={"#292929"}
-        >
-          Geral
-        </Typography>
-      </Box>
+        {tarefa.titulo || "Título da Tarefa"}
+      </Typography>
 
-      <Box width={"100%"}>
-        <Divider
-          variant="fullWidth"
-          sx={{
-            height: "0.3vh",
-            backgroundColor: "#464646",
-            borderRadius: "1rem",
-          }}
-        />
-      </Box>
+      <Divider
+        sx={{
+          marginY: "0.5rem",
+          backgroundColor: "#E0E0E0",
+          height: "1px",
+        }}
+      />
 
-      {/* Map para percorrer as tarefas do Agente */}
-      <Box
-        id="task-body"
-        display={"flex"}
-        justifyContent={"flex-start"}
-        alignItems={"center"}
-        gap={0.5}
-        paddingTop={2}
+      <Typography
+        fontSize="0.9rem"
+        fontFamily="Raleway, sans-serif"
+        color="#555"
       >
-        <Checkbox
-          color="default"
-          sx={{
-            transform: "scale(1.0)",
-          }}
-        />
-
-        <Typography
-          fontFamily={"Raleway, sans-serif"}
-          fontSize={"0.9rem"}
-          color={"#171717"}
-        >
-          Tarefa 1
-        </Typography>
-      </Box>
-      <Box
-        id="task-body"
-        display={"flex"}
-        justifyContent={"flex-start"}
-        alignItems={"center"}
-        gap={0.5}
-        paddingTop={2}
+        <strong>Prioridade:</strong> {tarefa.prioridade || "N/A"}
+      </Typography>
+      <Typography
+        fontSize="0.9rem"
+        fontFamily="Raleway, sans-serif"
+        color="#555"
       >
-        <Checkbox color="default" />
-
-        <Typography
-          fontFamily={"Raleway, sans-serif"}
-          fontSize={"0.9rem"}
-          color={"#171717"}
-        >
-          Tarefa 2
-        </Typography>
-      </Box>
-      <Box
-        id="task-body"
-        display={"flex"}
-        justifyContent={"flex-start"}
-        alignItems={"center"}
-        gap={0.5}
-        paddingTop={2}
+        <strong>Status:</strong> {tarefa.status || "N/A"}
+      </Typography>
+      <Typography
+        fontSize="0.9rem"
+        fontFamily="Raleway, sans-serif"
+        color="#555"
       >
-        <Checkbox color="default" />
-
-        <Typography
-          fontFamily={"Raleway, sans-serif"}
-          fontSize={"0.9rem"}
-          color={"#171717"}
-        >
-          Tarefa 3
-        </Typography>
-      </Box>
+        <strong>Prazo:</strong> {tarefa.prazo || "N/A"}
+      </Typography>
     </Box>
   );
 };
